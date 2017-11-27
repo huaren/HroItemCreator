@@ -44,6 +44,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Portugu&#xea;s"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mei_portuguesActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -126,88 +129,88 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txt_Buy" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_Buy" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               <Component id="txf_Buy" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="cbx_Refinable" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txt_Refinable" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_Refinable" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txt_Attack" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_Attack" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               <Component id="txf_Attack" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="cbx_Gender" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txt_Gender" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_Gender" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txt_Defense" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_Defense" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               <Component id="txf_Defense" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="cbx_WeaponType" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txt_WeaponType" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_WeaponType" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txt_Range" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_Range" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               <Component id="txf_Range" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="cbx_ShieldType" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txt_ShieldType" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_ShieldType" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="txf_Weight" min="-2" pref="140" max="-2" attributes="0"/>
-                              <Component id="txt_Weight" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_Weight" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="cbx_AmmoType" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txt_AmmoType" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_AmmoType" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txt_EquipLevel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_EquipLevel" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               <Component id="txf_WeaponLVL" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="txt_WeaponLVL" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_WeaponLVL" min="-2" pref="140" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
                               </Group>
                               <Component id="cbx_WeaponLVL" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txt_AegisName" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_AegisName" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txt_Name" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_Name" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                                   <Component id="txf_Name" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <Component id="txt_Sell" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_Sell" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="txf_ID" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="txt_ItemType" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txt_ID" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txt_ItemType" min="-2" pref="140" max="-2" attributes="0"/>
+                                          <Component id="txt_ID" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
@@ -216,13 +219,13 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txt_ViwerID" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_ViwerID" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               <Component id="txf_ViwerID" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="txt_Slot" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_Slot" min="-2" pref="140" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <Component id="cbx_Slot" max="32767" attributes="0"/>
@@ -526,96 +529,153 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Aegis Name"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_Name">
           <Properties>
             <Property name="text" type="java.lang.String" value="Name"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_Sell">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sell"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_Buy">
           <Properties>
             <Property name="text" type="java.lang.String" value="Buy"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_Attack">
           <Properties>
             <Property name="text" type="java.lang.String" value="Attack"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_Defense">
           <Properties>
             <Property name="text" type="java.lang.String" value="Defense"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_Range">
           <Properties>
             <Property name="text" type="java.lang.String" value="Range"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_Weight">
           <Properties>
             <Property name="text" type="java.lang.String" value="Weight"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_ViwerID">
           <Properties>
             <Property name="text" type="java.lang.String" value="Viwer ID"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_EquipLevel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Equip lvl"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_ID">
           <Properties>
             <Property name="text" type="java.lang.String" value="ID"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_ItemType">
           <Properties>
             <Property name="text" type="java.lang.String" value="Item type"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_Refinable">
           <Properties>
             <Property name="text" type="java.lang.String" value="Refinable"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_Gender">
           <Properties>
             <Property name="text" type="java.lang.String" value="Gender"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_WeaponType">
           <Properties>
             <Property name="text" type="java.lang.String" value="Weapon type"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_ShieldType">
           <Properties>
             <Property name="text" type="java.lang.String" value="Shield type"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_AmmoType">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ammo type"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_Slot">
           <Properties>
             <Property name="text" type="java.lang.String" value="Slot"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_WeaponLVL">
           <Properties>
             <Property name="text" type="java.lang.String" value="Weapon lvl"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
       </SubComponents>
     </Container>
@@ -1113,22 +1173,19 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txt_OnEquip" min="-2" max="-2" attributes="0"/>
-                              <Component id="txf_OnEquip" min="-2" pref="330" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txt_OnUnequip" min="-2" max="-2" attributes="0"/>
-                              <Component id="txf_OnUnequip" min="-2" pref="330" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="txt_Normal" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
                       <Component id="txf_Script" max="32767" attributes="0"/>
+                      <Component id="txt_Normal" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txf_OnEquip" alignment="0" min="-2" pref="380" max="-2" attributes="0"/>
+                              <Component id="txt_OnEquip" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt_OnUnequip" linkSize="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="txf_OnUnequip" min="-2" pref="380" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -1142,16 +1199,14 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="txf_Script" min="-2" pref="20" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="txf_OnUnequip" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txt_OnEquip" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txt_OnUnequip" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txf_OnEquip" min="-2" pref="20" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txt_OnEquip" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_OnUnequip" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txf_OnEquip" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="txf_OnUnequip" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
