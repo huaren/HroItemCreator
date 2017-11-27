@@ -16,11 +16,45 @@
         <Property name="text" type="java.lang.String" value="ID"/>
       </Properties>
     </Component>
+    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="men_File">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="File"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="mei_Exit">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Exit"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="men_Language">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Language"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="mei_English">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="English"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="mei_portugues">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Portugu&#xea;s"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
   <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
@@ -42,11 +76,11 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jPanel1" max="32767" attributes="0"/>
+                  <Component id="pan_Script" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                      <Component id="pan_Item" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                      <Component id="pan_EquipedBy" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
@@ -58,102 +92,18 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jPanel3" max="32767" attributes="0"/>
-                  <Component id="jPanel2" max="32767" attributes="0"/>
+                  <Component id="pan_EquipedBy" max="32767" attributes="0"/>
+                  <Component id="pan_Item" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <Component id="pan_Script" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel1">
-      <Properties>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Script"/>
-          </Border>
-        </Property>
-      </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField17" min="-2" pref="330" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField18" min="-2" pref="330" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="jTextField15" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jTextField15" min="-2" pref="20" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jTextField18" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField17" min="-2" pref="20" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JTextField" name="jTextField18">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField15">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel15">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Normal"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel17">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="OnEquip"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel18">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="OnUnequip"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField17">
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JPanel" name="jPanel2">
+    <Container class="javax.swing.JPanel" name="pan_Item">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -168,107 +118,115 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jTextField1" max="32767" attributes="0"/>
+                      <Component id="txf_AegisName" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jTextField3" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Component id="txf_Sell" min="-2" pref="140" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" max="32767" attributes="0"/>
+                          <Component id="cbx_ItemType" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField4" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="txt_Buy" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txf_Buy" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jComboBox2" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbx_Refinable" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txt_Refinable" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField5" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="txt_Attack" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txf_Attack" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jComboBox3" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbx_Gender" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txt_Gender" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField6" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="txt_Defense" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txf_Defense" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jComboBox4" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jLabel22" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbx_WeaponType" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txt_WeaponType" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField7" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="txt_Range" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txf_Range" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jComboBox5" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jLabel23" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbx_ShieldType" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txt_ShieldType" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField8" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="txf_Weight" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="txt_Weight" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jComboBox6" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbx_AmmoType" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txt_AmmoType" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField10" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="txt_EquipLevel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txf_WeaponLVL" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField13" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="txt_WeaponLVL" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="cbx_WeaponLVL" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField2" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField14" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                  </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txt_AegisName" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txt_Name" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txf_Name" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="txt_Sell" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField9" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField12" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txf_ID" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txt_ItemType" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txt_ID" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt_ViwerID" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txf_ViwerID" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="txt_Slot" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="cbx_Slot" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -287,114 +245,108 @@
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
                                               <Group type="102" attributes="0">
-                                                  <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Group type="102" attributes="0">
-                                                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="jTextField1" min="-2" pref="20" max="-2" attributes="0"/>
-                                                          <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txt_AegisName" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txf_AegisName" min="-2" pref="20" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" alignment="1" attributes="0">
                                                           <Group type="103" groupAlignment="0" attributes="0">
                                                               <Group type="102" alignment="1" attributes="0">
-                                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                                      <Group type="102" alignment="1" attributes="0">
-                                                                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                                                          <EmptySpace max="-2" attributes="0"/>
-                                                                          <Component id="jTextField2" min="-2" pref="20" max="-2" attributes="0"/>
-                                                                      </Group>
-                                                                      <Group type="102" attributes="0">
-                                                                          <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                                                                          <EmptySpace max="-2" attributes="0"/>
-                                                                          <Component id="jTextField14" min="-2" pref="20" max="-2" attributes="0"/>
-                                                                      </Group>
-                                                                  </Group>
+                                                                  <Component id="txt_Name" min="-2" max="-2" attributes="0"/>
                                                                   <EmptySpace max="-2" attributes="0"/>
-                                                                  <Group type="103" groupAlignment="3" attributes="0">
-                                                                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                                      <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                                  </Group>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Group type="103" groupAlignment="3" attributes="0">
-                                                                      <Component id="jTextField3" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                                                                      <Component id="jComboBox1" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                                                                  </Group>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="jTextField4" min="-2" pref="20" max="-2" attributes="0"/>
+                                                                  <Component id="txf_Name" min="-2" pref="20" max="-2" attributes="0"/>
                                                               </Group>
-                                                              <Group type="102" alignment="1" attributes="0">
-                                                                  <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                                                              <Group type="102" attributes="0">
+                                                                  <Component id="txt_ID" min="-2" max="-2" attributes="0"/>
                                                                   <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="jComboBox2" min="-2" pref="20" max="-2" attributes="0"/>
+                                                                  <Component id="txf_ID" min="-2" pref="20" max="-2" attributes="0"/>
                                                               </Group>
                                                           </Group>
                                                           <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="3" attributes="0">
+                                                              <Component id="txt_Sell" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="txt_ItemType" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
                                                           <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="jTextField5" min="-2" pref="20" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="3" attributes="0">
+                                                              <Component id="txf_Sell" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                                                              <Component id="cbx_ItemType" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="txt_Buy" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="txf_Buy" min="-2" pref="20" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <Group type="102" attributes="0">
-                                                          <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                                                      <Group type="102" alignment="1" attributes="0">
+                                                          <Component id="txt_Refinable" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="jComboBox3" min="-2" pref="20" max="-2" attributes="0"/>
+                                                          <Component id="cbx_Refinable" min="-2" pref="20" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txt_Attack" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jTextField6" min="-2" pref="20" max="-2" attributes="0"/>
+                                                  <Component id="txf_Attack" min="-2" pref="20" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" attributes="0">
-                                                  <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txt_Gender" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jComboBox4" min="-2" pref="20" max="-2" attributes="0"/>
+                                                  <Component id="cbx_Gender" min="-2" pref="20" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txt_Defense" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField7" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Component id="txf_Defense" min="-2" pref="20" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
-                                          <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txt_WeaponType" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jComboBox5" min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Component id="cbx_WeaponType" min="-2" pref="20" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_Range" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField8" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="txf_Range" min="-2" pref="20" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_ShieldType" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jComboBox6" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="cbx_ShieldType" min="-2" pref="20" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_Weight" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField9" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="txf_Weight" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_AmmoType" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField12" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="cbx_AmmoType" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField10" min="-2" pref="20" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextField13" min="-2" pref="20" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txt_ViwerID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_Slot" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txf_ViwerID" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="cbx_Slot" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txt_EquipLevel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_WeaponLVL" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txf_WeaponLVL" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="cbx_WeaponLVL" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -402,220 +354,272 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JTextField" name="txf_AegisName">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txf_Name">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txf_Sell">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txf_Buy">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txf_Attack">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txf_Defense">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txf_Range">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txf_Weight">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txf_ViwerID">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txf_WeaponLVL">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txf_ID">
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cbx_ItemType">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Buy"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="10">
+                <StringItem index="0" value="Healing"/>
+                <StringItem index="1" value="Usable"/>
+                <StringItem index="2" value="Misc"/>
+                <StringItem index="3" value="Weapon"/>
+                <StringItem index="4" value="Armor"/>
+                <StringItem index="5" value="Card"/>
+                <StringItem index="6" value="Pet Egg"/>
+                <StringItem index="7" value="Pet Equipment"/>
+                <StringItem index="8" value="Arrow/Ammunition"/>
+                <StringItem index="9" value="Other"/>
+              </StringArray>
+            </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JComboBox" name="cbx_Refinable">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Range"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="2">
+                <StringItem index="0" value="Yes"/>
+                <StringItem index="1" value="No"/>
+              </StringArray>
+            </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField9">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JComboBox" name="cbx_Gender">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Name"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="3">
+                <StringItem index="0" value="Both"/>
+                <StringItem index="1" value="Male"/>
+                <StringItem index="2" value="Female"/>
+              </StringArray>
+            </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField10">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JComboBox" name="cbx_WeaponType">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Weapon lvl"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="21">
+                <StringItem index="0" value="Daggers"/>
+                <StringItem index="1" value="1-Handed Swords"/>
+                <StringItem index="2" value="2-Handed Swords"/>
+                <StringItem index="3" value="1-Handed Spears"/>
+                <StringItem index="4" value="2-Handed Spears"/>
+                <StringItem index="5" value="1-Handed Axes"/>
+                <StringItem index="6" value="2-Handed Axes"/>
+                <StringItem index="7" value="Maces"/>
+                <StringItem index="8" value="Wand/Staff"/>
+                <StringItem index="9" value="Bows/Crossbows"/>
+                <StringItem index="10" value="Knuckle Weapons"/>
+                <StringItem index="11" value="Instrument"/>
+                <StringItem index="12" value="Whips"/>
+                <StringItem index="13" value="Books"/>
+                <StringItem index="14" value="Katars"/>
+                <StringItem index="15" value="Revolvers"/>
+                <StringItem index="16" value="Rifles"/>
+                <StringItem index="17" value="Shotguns"/>
+                <StringItem index="18" value="Gatling guns"/>
+                <StringItem index="19" value="Grenade launcher"/>
+                <StringItem index="20" value="Fuuma shuriken"/>
+              </StringArray>
+            </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel14">
+        <Component class="javax.swing.JComboBox" name="cbx_ShieldType">
           <Properties>
-            <Property name="text" type="java.lang.String" value="ID"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="Novice Guard"/>
+                <StringItem index="1" value="Buckler"/>
+                <StringItem index="2" value="Shield, Holy Guard"/>
+                <StringItem index="3" value="Mirror Shield"/>
+              </StringArray>
+            </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField14">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JComboBox" name="cbx_AmmoType">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Defense"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="9">
+                <StringItem index="0" value="Arrows"/>
+                <StringItem index="1" value="Daggers"/>
+                <StringItem index="2" value="Bullets"/>
+                <StringItem index="3" value="Shells"/>
+                <StringItem index="4" value="Grenades"/>
+                <StringItem index="5" value="Shuriken"/>
+                <StringItem index="6" value="Kunai"/>
+                <StringItem index="7" value="Cannonballs"/>
+                <StringItem index="8" value="Sling Item"/>
+              </StringArray>
+            </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField5">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField8">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField6">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField7">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField2">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JComboBox" name="cbx_Slot">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Slot"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="5">
+                <StringItem index="0" value="0"/>
+                <StringItem index="1" value="1"/>
+                <StringItem index="2" value="2"/>
+                <StringItem index="3" value="3"/>
+                <StringItem index="4" value="4"/>
+              </StringArray>
+            </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField3">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JComboBox" name="cbx_WeaponLVL">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Attack"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="1"/>
+                <StringItem index="1" value="2"/>
+                <StringItem index="2" value="3"/>
+                <StringItem index="3" value="4"/>
+              </StringArray>
+            </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="txt_AegisName">
           <Properties>
             <Property name="text" type="java.lang.String" value="Aegis Name"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="txt_Name">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Viwer ID"/>
+            <Property name="text" type="java.lang.String" value="Name"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField12">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="txt_Sell">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sell"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel12">
+        <Component class="javax.swing.JLabel" name="txt_Buy">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Equip lvl"/>
+            <Property name="text" type="java.lang.String" value="Buy"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField4">
-        </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox1">
+        <Component class="javax.swing.JLabel" name="txt_Attack">
           <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel19">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Item type"/>
+            <Property name="text" type="java.lang.String" value="Attack"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox2">
+        <Component class="javax.swing.JLabel" name="txt_Defense">
           <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel20">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Refinable"/>
+            <Property name="text" type="java.lang.String" value="Defense"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox3">
+        <Component class="javax.swing.JLabel" name="txt_Range">
           <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel21">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Gender"/>
+            <Property name="text" type="java.lang.String" value="Range"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox4">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel22">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Weapon type"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel23">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Shield type"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox5">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel24">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Ammo type"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox6">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField13">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel13">
+        <Component class="javax.swing.JLabel" name="txt_Weight">
           <Properties>
             <Property name="text" type="java.lang.String" value="Weight"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JLabel" name="txt_ViwerID">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Viwer ID"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txt_EquipLevel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Equip lvl"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txt_ID">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="ID"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txt_ItemType">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Item type"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txt_Refinable">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Refinable"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txt_Gender">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gender"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txt_WeaponType">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Weapon type"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txt_ShieldType">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Shield type"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txt_AmmoType">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ammo type"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txt_Slot">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Slot"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txt_WeaponLVL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Weapon lvl"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="jPanel3">
+    <Container class="javax.swing.JPanel" name="pan_EquipedBy">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -629,64 +633,64 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jCheckBox24" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox19" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox12" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox11" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox10" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox14" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox13" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox15" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox17" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox16" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox18" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox20" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox22" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox23" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox21" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox25" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox7" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox26" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox6" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox4" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox2" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox3" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox8" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox5" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox27" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox9" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_StarGladiator" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Rogue" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Priest" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Thief" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Knight" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Wizard" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_BlackSmith" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Hunter" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Crusader" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Assassin" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Monk" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Sage" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Alchemist" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Taekwon" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_BardDancer" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_SoulLinker" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_KagerouOboro" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Gunslinger" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Ninja" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Rebelion" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Archer" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Acolyte" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Mage" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Swordman" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Novice" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_EveryJob" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Merchant" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jCheckBox30" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox31" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox28" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox29" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox32" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox33" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Upper3rdJobs" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Baby3rdJobs" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_3rdJobs" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_BabyJobs" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_UpperJobs" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_NormalJobs" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                          <Component id="jCheckBox48" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCheckBox47" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="ckb_CostumeMiddle" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="ckb_CostumeUpper" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jCheckBox46" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox36" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox38" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox40" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox39" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox41" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox42" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox43" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox44" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox45" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox37" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox49" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox52" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox35" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox50" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox51" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox53" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox34" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Accessory2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_MiddleHeadGear" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_UpperHeadGear" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_RightHand" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_LeftHand" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Armor" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Mantle" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Shoes" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Accessory1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_CostumeLower" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_LowerHeadGear" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_ShadowMantle" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_ShadowAccessory2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_ShadowAccessory1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_ShadowArmor" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_ShadowWeapon" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_ShadowShield" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_ShadowShoes" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -697,417 +701,483 @@
               <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jCheckBox27" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_EveryJob" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox5" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Novice" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox1" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Swordman" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox8" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Mage" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox2" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Archer" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox3" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Acolyte" min="-2" pref="18" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jCheckBox33" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_NormalJobs" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox32" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_UpperJobs" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox29" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_BabyJobs" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox28" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_3rdJobs" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox30" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Upper3rdJobs" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox31" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Baby3rdJobs" min="-2" pref="18" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jCheckBox9" min="-2" pref="18" max="-2" attributes="0"/>
+                  <Component id="ckb_Merchant" min="-2" pref="18" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jCheckBox37" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_LowerHeadGear" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox36" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_MiddleHeadGear" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox38" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_UpperHeadGear" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox40" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_RightHand" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jCheckBox39" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="jCheckBox13" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="ckb_LeftHand" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="ckb_BlackSmith" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox41" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Armor" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox42" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Mantle" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox43" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Shoes" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox44" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Accessory1" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox46" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Accessory2" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="jCheckBox45" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_CostumeLower" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jCheckBox48" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="jCheckBox22" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="ckb_CostumeMiddle" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="ckb_Alchemist" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jCheckBox47" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="jCheckBox21" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="ckb_CostumeUpper" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="ckb_BardDancer" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jCheckBox11" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Thief" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox10" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Knight" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox12" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Priest" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox14" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Wizard" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="jCheckBox15" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Hunter" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox16" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Assassin" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox17" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Crusader" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox18" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Monk" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox20" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Sage" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="jCheckBox19" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Rogue" min="-2" pref="18" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jCheckBox49" min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="jCheckBox23" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
+                      <Component id="ckb_ShadowMantle" min="-2" pref="18" max="-2" attributes="0"/>
+                      <Component id="ckb_Taekwon" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jCheckBox50" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_ShadowArmor" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox51" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_ShadowWeapon" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox53" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_ShadowShield" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox34" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_ShadowShoes" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jCheckBox52" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="jCheckBox4" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="ckb_ShadowAccessory2" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="ckb_Rebelion" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jCheckBox24" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_StarGladiator" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox25" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_SoulLinker" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox26" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Gunslinger" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox6" min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="ckb_Ninja" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jCheckBox7" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="jCheckBox35" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="ckb_KagerouOboro" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="ckb_ShadowAccessory1" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace min="0" pref="3" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="5" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox43">
+        <Component class="javax.swing.JCheckBox" name="ckb_NormalJobs">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Shoes"/>
+            <Property name="text" type="java.lang.String" value="Normal jobs"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox32">
+        <Component class="javax.swing.JCheckBox" name="ckb_UpperJobs">
           <Properties>
             <Property name="text" type="java.lang.String" value="Upper jobs"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox32ActionPerformed"/>
-          </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox13">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Blacksmith"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox35">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="[Shadow] Accessory 1"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox45">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="[Costume] Lower headgear"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox25">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Soul linker"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox15">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Hunter"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox17">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Crusader"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox51">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="[Shadow] Weapon"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Archer"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox27">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Every job"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox27ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox29">
+        <Component class="javax.swing.JCheckBox" name="ckb_BabyJobs">
           <Properties>
             <Property name="text" type="java.lang.String" value="Baby jobs"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox53">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="[Shadow] Shield"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox41">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Armor"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox36">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Middle headgear"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox48">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="[Costume] Middle headgear"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox3">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Acolyte"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox10">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Knight"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox50">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="[Shadow] Armor"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox46">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Accessory 2"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox28">
+        <Component class="javax.swing.JCheckBox" name="ckb_3rdJobs">
           <Properties>
             <Property name="text" type="java.lang.String" value="Third jobs"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox33">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Normal jobs"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox33ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox34">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="[Shadow] Shoes"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox4">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Rebelion"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox11">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Thief"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox42">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Mantle"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox24">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="StarGladiator"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox21">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Bard/Dander"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox40">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Right hand"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox8">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Mage"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox6">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Ninja"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox30">
+        <Component class="javax.swing.JCheckBox" name="ckb_Upper3rdJobs">
           <Properties>
             <Property name="text" type="java.lang.String" value="Upper third jobs"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox39">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Left hand"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox19">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Rogue"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox14">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Wizard"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox47">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="[Costume] Upper headgear"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox47ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox9">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Merchant"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox18">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Monk"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox31">
+        <Component class="javax.swing.JCheckBox" name="ckb_Baby3rdJobs">
           <Properties>
             <Property name="text" type="java.lang.String" value="Baby third jobs"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox5">
+        <Component class="javax.swing.JCheckBox" name="ckb_EveryJob">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Every job"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Novice">
           <Properties>
             <Property name="text" type="java.lang.String" value="Novice"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox5ActionPerformed"/>
-          </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox44">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Accessory 1"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox37">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Lower headgear"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox26">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Gunslinger"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox26ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox52">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="[Shadow] Accessory 2"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox12">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Priest"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+        <Component class="javax.swing.JCheckBox" name="ckb_Swordman">
           <Properties>
             <Property name="text" type="java.lang.String" value="Swordman"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox49">
+        <Component class="javax.swing.JCheckBox" name="ckb_Mage">
           <Properties>
-            <Property name="text" type="java.lang.String" value="[Costume] Mantle"/>
+            <Property name="text" type="java.lang.String" value="Mage"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox23">
+        <Component class="javax.swing.JCheckBox" name="ckb_Archer">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Taekwon"/>
+            <Property name="text" type="java.lang.String" value="Archer"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox16">
+        <Component class="javax.swing.JCheckBox" name="ckb_Acolyte">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Acolyte"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Merchant">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Merchant"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Thief">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Thief"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Knight">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Knight"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Priest">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Priest"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Wizard">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Wizard"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_BlackSmith">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Blacksmith"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Assassin">
           <Properties>
             <Property name="text" type="java.lang.String" value="Assassin"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox20">
+        <Component class="javax.swing.JCheckBox" name="ckb_Hunter">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Hunter"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Crusader">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Crusader"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Monk">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Monk"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Sage">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sage"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox38">
+        <Component class="javax.swing.JCheckBox" name="ckb_Rogue">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Upper headgear"/>
+            <Property name="text" type="java.lang.String" value="Rogue"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox7">
+        <Component class="javax.swing.JCheckBox" name="ckb_Alchemist">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Alchemist"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_BardDancer">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Bard/Dander"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Taekwon">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Taekwon"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_StarGladiator">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="StarGladiator"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_SoulLinker">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Soul linker"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Gunslinger">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gunslinger"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Ninja">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ninja"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_KagerouOboro">
           <Properties>
             <Property name="text" type="java.lang.String" value="Kagerou/Oboro"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox22">
+        <Component class="javax.swing.JCheckBox" name="ckb_Rebelion">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Alchemist"/>
+            <Property name="text" type="java.lang.String" value="Rebelion"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_LowerHeadGear">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Lower headgear"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_MiddleHeadGear">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Middle headgear"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_UpperHeadGear">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Upper headgear"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_RightHand">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Right hand"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_LeftHand">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Left hand"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Armor">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Armor"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Mantle">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Mantle"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Shoes">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Shoes"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Accessory1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Accessory 1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_Accessory2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Accessory 2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_CostumeLower">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="[Costume] Lower headgear"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_CostumeMiddle">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="[Costume] Middle headgear"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_CostumeUpper">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="[Costume] Upper headgear"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_ShadowMantle">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="[Costume] Mantle"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_ShadowArmor">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="[Shadow] Armor"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_ShadowWeapon">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="[Shadow] Weapon"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_ShadowShield">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="[Shadow] Shield"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_ShadowShoes">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="[Shadow] Shoes"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_ShadowAccessory1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="[Shadow] Accessory 1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="ckb_ShadowAccessory2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="[Shadow] Accessory 2"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="pan_Script">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Script"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt_OnEquip" min="-2" max="-2" attributes="0"/>
+                              <Component id="txf_OnEquip" min="-2" pref="330" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt_OnUnequip" min="-2" max="-2" attributes="0"/>
+                              <Component id="txf_OnUnequip" min="-2" pref="330" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="txt_Normal" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="txf_Script" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="txt_Normal" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="txf_Script" min="-2" pref="20" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="txf_OnUnequip" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txt_OnEquip" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_OnUnequip" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="txf_OnEquip" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JTextField" name="txf_Script">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txf_OnEquip">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txf_OnUnequip">
+        </Component>
+        <Component class="javax.swing.JLabel" name="txt_Normal">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Normal"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txt_OnEquip">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="OnEquip"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txt_OnUnequip">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="OnUnequip"/>
           </Properties>
         </Component>
       </SubComponents>
