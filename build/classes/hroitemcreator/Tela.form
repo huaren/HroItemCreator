@@ -39,6 +39,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="English"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mei_EnglishActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mei_portugues">
               <Properties>
@@ -196,24 +199,22 @@
                               <Component id="cbx_WeaponLVL" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txt_AegisName" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txt_Name" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <Component id="txf_Name" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <Component id="txt_Sell" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txf_ID" max="32767" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="txt_ItemType" min="-2" pref="140" max="-2" attributes="0"/>
-                                          <Component id="txt_ID" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="txt_AegisName" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txt_Name" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="txf_Name" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="txt_Sell" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txf_ID" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="txt_ItemType" min="-2" pref="140" max="-2" attributes="0"/>
+                                      <Component id="txt_ID" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                                   </Group>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -693,64 +694,64 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="ckb_StarGladiator" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Rogue" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Priest" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Thief" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Knight" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Wizard" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_BlackSmith" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Hunter" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Crusader" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Assassin" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Monk" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Sage" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Alchemist" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Taekwon" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_BardDancer" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_SoulLinker" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_KagerouOboro" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Gunslinger" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Ninja" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Rebelion" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Archer" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Acolyte" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Mage" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Swordman" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Novice" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_EveryJob" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Merchant" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_StarGladiator" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Rogue" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Priest" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Thief" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Knight" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Wizard" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_BlackSmith" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Hunter" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Crusader" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Assassin" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Monk" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Sage" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Alchemist" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Taekwon" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_BardDancer" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_SoulLinker" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_KagerouOboro" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Gunslinger" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Ninja" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Rebelion" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Archer" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Acolyte" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Mage" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Swordman" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Novice" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_EveryJob" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      <Component id="ckb_Merchant" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="ckb_Upper3rdJobs" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Baby3rdJobs" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_3rdJobs" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_BabyJobs" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_UpperJobs" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_NormalJobs" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Upper3rdJobs" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_Baby3rdJobs" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_3rdJobs" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_BabyJobs" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_UpperJobs" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_NormalJobs" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                          <Component id="ckb_CostumeMiddle" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="ckb_CostumeUpper" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="ckb_CostumeMiddle" alignment="1" min="-2" pref="230" max="-2" attributes="0"/>
+                          <Component id="ckb_CostumeUpper" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="ckb_Accessory2" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_MiddleHeadGear" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_UpperHeadGear" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_RightHand" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_LeftHand" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Armor" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Mantle" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Shoes" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_Accessory1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_CostumeLower" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_LowerHeadGear" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_ShadowMantle" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_ShadowAccessory2" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_ShadowAccessory1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_ShadowArmor" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_ShadowWeapon" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_ShadowShield" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ckb_ShadowShoes" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="ckb_Accessory2" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_MiddleHeadGear" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_UpperHeadGear" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_RightHand" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_LeftHand" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_Armor" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_Mantle" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_Shoes" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_Accessory1" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_CostumeLower" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_LowerHeadGear" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_ShadowMantle" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_ShadowAccessory2" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_ShadowAccessory1" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_ShadowArmor" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_ShadowWeapon" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_ShadowShield" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
+                      <Component id="ckb_ShadowShoes" alignment="0" min="-2" pref="230" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -1018,7 +1019,7 @@
         </Component>
         <Component class="javax.swing.JCheckBox" name="ckb_BardDancer">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Bard/Dander"/>
+            <Property name="text" type="java.lang.String" value="Bard/Dancer"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JCheckBox" name="ckb_Taekwon">
@@ -1173,21 +1174,28 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="txf_Script" max="32767" attributes="0"/>
-                      <Component id="txt_Normal" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="txt_Normal" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="327" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txf_OnEquip" alignment="0" min="-2" pref="380" max="-2" attributes="0"/>
-                              <Component id="txt_OnEquip" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txf_Script" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="txf_OnEquip" alignment="0" min="-2" pref="390" max="-2" attributes="0"/>
+                                      <Component id="txt_OnEquip" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="txf_OnUnequip" min="-2" pref="390" max="-2" attributes="0"/>
+                                      <Component id="txt_OnUnequip" linkSize="2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txt_OnUnequip" linkSize="2" min="-2" max="-2" attributes="0"/>
-                              <Component id="txf_OnUnequip" min="-2" pref="380" max="-2" attributes="0"/>
-                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
