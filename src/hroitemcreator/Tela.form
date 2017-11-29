@@ -23,10 +23,29 @@
             <Property name="text" type="java.lang.String" value="File"/>
           </Properties>
           <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="mei_New">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="New"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mei_NewActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="mei_Save">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Save"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mei_SaveActionPerformed"/>
+              </Events>
+            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mei_Exit">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Exit"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mei_ExitActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -45,7 +64,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="mei_portugues">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Portugu&#xea;s"/>
+                <Property name="text" type="java.lang.String" value="Portuguese"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mei_portuguesActionPerformed"/>
@@ -82,7 +101,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="jTabbedPane2" min="-2" pref="847" max="-2" attributes="0"/>
+              <Component id="tab_Panel" min="-2" pref="847" max="-2" attributes="0"/>
               <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -90,14 +109,17 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jTabbedPane2" min="-2" pref="529" max="-2" attributes="0"/>
+              <Component id="tab_Panel" min="-2" pref="529" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JTabbedPane" name="jTabbedPane2">
+    <Container class="javax.swing.JTabbedPane" name="tab_Panel">
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tab_PanelMouseClicked"/>
+      </Events>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
@@ -124,72 +146,72 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txt_Buy" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lbl_Buy" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                                   <Component id="txf_Buy" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="cbx_Refinable" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txt_Refinable" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lbl_Refinable" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txt_Attack" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lbl_Attack" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                                   <Component id="txf_Attack" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="cbx_Gender" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txt_Gender" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lbl_Gender" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txt_Defense" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lbl_Defense" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                                   <Component id="txf_Defense" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="cbx_WeaponType" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txt_WeaponType" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lbl_WeaponType" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txt_Range" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lbl_Range" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                                   <Component id="txf_Range" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="cbx_ShieldType" alignment="0" pref="666" max="32767" attributes="0"/>
-                                  <Component id="txt_ShieldType" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lbl_ShieldType" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="txf_Weight" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <Component id="txt_Weight" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lbl_Weight" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="cbx_AmmoType" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txt_AmmoType" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lbl_AmmoType" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txt_Name" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <Component id="txf_Name" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <Component id="txt_Sell" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lbl_ID" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="txf_ID" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lbl_Sell" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txf_ID" max="32767" attributes="0"/>
+                                  <Component id="txf_Name" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="txt_ItemType" min="-2" pref="140" max="-2" attributes="0"/>
-                                          <Component id="txt_ID" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                          <Component id="lbl_ItemType" min="-2" pref="140" max="-2" attributes="0"/>
+                                          <Component id="lbl_Name" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
@@ -197,13 +219,13 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txt_ViwerID" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lbl_ViwerID" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                                   <Component id="txf_ViwerID" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="txt_Slot" min="-2" pref="140" max="-2" attributes="0"/>
+                                      <Component id="lbl_Slot" min="-2" pref="140" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="cbx_Slot" max="32767" attributes="0"/>
@@ -216,11 +238,11 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txt_AegisName" linkSize="1" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="lbl_AegisName" linkSize="1" min="-2" pref="140" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="txt_EquipLevel" linkSize="1" min="-2" pref="140" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txt_WeaponLVL" min="-2" pref="140" max="-2" attributes="0"/>
+                                      <Component id="lbl_EquipLevel" linkSize="1" min="-2" pref="140" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="lbl_WeaponLVL" min="-2" pref="140" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -242,7 +264,7 @@
                                           <Group type="102" attributes="0">
                                               <Group type="103" groupAlignment="1" attributes="0">
                                                   <Group type="102" attributes="0">
-                                                      <Component id="txt_AegisName" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lbl_AegisName" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="txf_AegisName" min="-2" pref="20" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
@@ -250,20 +272,20 @@
                                                           <Group type="102" alignment="1" attributes="0">
                                                               <Group type="103" groupAlignment="0" attributes="0">
                                                                   <Group type="102" alignment="1" attributes="0">
-                                                                      <Component id="txt_Name" min="-2" max="-2" attributes="0"/>
-                                                                      <EmptySpace max="-2" attributes="0"/>
-                                                                      <Component id="txf_Name" min="-2" pref="20" max="-2" attributes="0"/>
-                                                                  </Group>
-                                                                  <Group type="102" attributes="0">
-                                                                      <Component id="txt_ID" min="-2" max="-2" attributes="0"/>
+                                                                      <Component id="lbl_ID" min="-2" max="-2" attributes="0"/>
                                                                       <EmptySpace max="-2" attributes="0"/>
                                                                       <Component id="txf_ID" min="-2" pref="20" max="-2" attributes="0"/>
+                                                                  </Group>
+                                                                  <Group type="102" attributes="0">
+                                                                      <Component id="lbl_Name" min="-2" max="-2" attributes="0"/>
+                                                                      <EmptySpace max="-2" attributes="0"/>
+                                                                      <Component id="txf_Name" min="-2" pref="20" max="-2" attributes="0"/>
                                                                   </Group>
                                                               </Group>
                                                               <EmptySpace max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="3" attributes="0">
-                                                                  <Component id="txt_Sell" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                                  <Component id="txt_ItemType" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="lbl_Sell" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="lbl_ItemType" alignment="3" min="-2" max="-2" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="3" attributes="0">
@@ -271,64 +293,64 @@
                                                                   <Component id="cbx_ItemType" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace max="-2" attributes="0"/>
-                                                              <Component id="txt_Buy" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="lbl_Buy" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace max="-2" attributes="0"/>
                                                               <Component id="txf_Buy" min="-2" pref="20" max="-2" attributes="0"/>
                                                           </Group>
                                                           <Group type="102" alignment="1" attributes="0">
-                                                              <Component id="txt_Refinable" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="lbl_Refinable" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace max="-2" attributes="0"/>
                                                               <Component id="cbx_Refinable" min="-2" pref="20" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="txt_Attack" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lbl_Attack" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="txf_Attack" min="-2" pref="20" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" attributes="0">
-                                                      <Component id="txt_Gender" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lbl_Gender" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="cbx_Gender" min="-2" pref="20" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="txt_Defense" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_Defense" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="txf_Defense" min="-2" pref="20" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" attributes="0">
-                                              <Component id="txt_WeaponType" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_WeaponType" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="cbx_WeaponType" min="-2" pref="20" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txt_Range" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_Range" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="txf_Range" min="-2" pref="20" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="txt_ShieldType" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_ShieldType" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="cbx_ShieldType" min="-2" pref="20" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_Weight" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_Weight" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="txf_Weight" min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="txt_AmmoType" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_AmmoType" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="cbx_AmmoType" min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txt_ViwerID" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txt_Slot" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_ViwerID" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_Slot" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -337,8 +359,8 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txt_EquipLevel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txt_WeaponLVL" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_EquipLevel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_WeaponLVL" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -353,7 +375,7 @@
           <SubComponents>
             <Component class="javax.swing.JTextField" name="txf_AegisName">
             </Component>
-            <Component class="javax.swing.JTextField" name="txf_Name">
+            <Component class="javax.swing.JTextField" name="txf_ID">
             </Component>
             <Component class="javax.swing.JTextField" name="txf_Sell">
             </Component>
@@ -371,7 +393,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txf_WeaponLVL">
             </Component>
-            <Component class="javax.swing.JTextField" name="txf_ID">
+            <Component class="javax.swing.JTextField" name="txf_Name">
             </Component>
             <Component class="javax.swing.JComboBox" name="cbx_ItemType">
               <Properties>
@@ -389,6 +411,7 @@
                     <StringItem index="9" value="Other"/>
                   </StringArray>
                 </Property>
+                <Property name="selectedIndex" type="int" value="-1"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -402,6 +425,7 @@
                     <StringItem index="1" value="No"/>
                   </StringArray>
                 </Property>
+                <Property name="selectedIndex" type="int" value="-1"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -416,6 +440,7 @@
                     <StringItem index="2" value="Female"/>
                   </StringArray>
                 </Property>
+                <Property name="selectedIndex" type="int" value="-1"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -436,7 +461,7 @@
                     <StringItem index="8" value="Wand/Staff"/>
                     <StringItem index="9" value="Bows/Crossbows"/>
                     <StringItem index="10" value="Knuckle Weapons"/>
-                    <StringItem index="11" value="Instrument"/>
+                    <StringItem index="11" value="Musicas instrument"/>
                     <StringItem index="12" value="Whips"/>
                     <StringItem index="13" value="Books"/>
                     <StringItem index="14" value="Katars"/>
@@ -448,6 +473,7 @@
                     <StringItem index="20" value="Fuuma shuriken"/>
                   </StringArray>
                 </Property>
+                <Property name="selectedIndex" type="int" value="-1"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -456,13 +482,15 @@
             <Component class="javax.swing.JComboBox" name="cbx_ShieldType">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
+                  <StringArray count="5">
                     <StringItem index="0" value="Novice Guard"/>
                     <StringItem index="1" value="Buckler"/>
-                    <StringItem index="2" value="Shield, Holy Guard"/>
-                    <StringItem index="3" value="Mirror Shield"/>
+                    <StringItem index="2" value="Shield"/>
+                    <StringItem index="3" value="Holy Guard"/>
+                    <StringItem index="4" value="Mirror Shield"/>
                   </StringArray>
                 </Property>
+                <Property name="selectedIndex" type="int" value="-1"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -483,6 +511,7 @@
                     <StringItem index="8" value="Sling Item"/>
                   </StringArray>
                 </Property>
+                <Property name="selectedIndex" type="int" value="-1"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -499,6 +528,7 @@
                     <StringItem index="4" value="4"/>
                   </StringArray>
                 </Property>
+                <Property name="selectedIndex" type="int" value="-1"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -514,12 +544,13 @@
                     <StringItem index="3" value="4"/>
                   </StringArray>
                 </Property>
+                <Property name="selectedIndex" type="int" value="-1"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JLabel" name="txt_AegisName">
+            <Component class="javax.swing.JLabel" name="lbl_AegisName">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Aegis Name"/>
               </Properties>
@@ -527,79 +558,7 @@
                 <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
               </AccessibilityProperties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txt_Name">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Name"/>
-              </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
-              </AccessibilityProperties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="txt_Sell">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Sell"/>
-              </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
-              </AccessibilityProperties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="txt_Buy">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Buy"/>
-              </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
-              </AccessibilityProperties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="txt_Attack">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Attack"/>
-              </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
-              </AccessibilityProperties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="txt_Defense">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Defense"/>
-              </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
-              </AccessibilityProperties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="txt_Range">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Range"/>
-              </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
-              </AccessibilityProperties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="txt_Weight">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Weight"/>
-              </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
-              </AccessibilityProperties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="txt_ViwerID">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Viwer ID"/>
-              </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
-              </AccessibilityProperties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="txt_EquipLevel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Equip lvl"/>
-              </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
-              </AccessibilityProperties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="txt_ID">
+            <Component class="javax.swing.JLabel" name="lbl_ID">
               <Properties>
                 <Property name="text" type="java.lang.String" value="ID"/>
               </Properties>
@@ -607,7 +566,79 @@
                 <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
               </AccessibilityProperties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txt_ItemType">
+            <Component class="javax.swing.JLabel" name="lbl_Sell">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sell"/>
+              </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+              </AccessibilityProperties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_Buy">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Buy"/>
+              </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+              </AccessibilityProperties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_Attack">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Attack"/>
+              </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+              </AccessibilityProperties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_Defense">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Defense"/>
+              </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+              </AccessibilityProperties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_Range">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Range"/>
+              </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+              </AccessibilityProperties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_Weight">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Weight"/>
+              </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+              </AccessibilityProperties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_ViwerID">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Viwer ID"/>
+              </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+              </AccessibilityProperties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_EquipLevel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Equip lvl"/>
+              </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+              </AccessibilityProperties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_Name">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Name"/>
+              </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+              </AccessibilityProperties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_ItemType">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Item type"/>
               </Properties>
@@ -615,7 +646,7 @@
                 <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
               </AccessibilityProperties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txt_Refinable">
+            <Component class="javax.swing.JLabel" name="lbl_Refinable">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Refinable"/>
               </Properties>
@@ -623,7 +654,7 @@
                 <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
               </AccessibilityProperties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txt_Gender">
+            <Component class="javax.swing.JLabel" name="lbl_Gender">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Gender"/>
               </Properties>
@@ -631,7 +662,7 @@
                 <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
               </AccessibilityProperties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txt_WeaponType">
+            <Component class="javax.swing.JLabel" name="lbl_WeaponType">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Weapon type"/>
               </Properties>
@@ -639,7 +670,7 @@
                 <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
               </AccessibilityProperties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txt_ShieldType">
+            <Component class="javax.swing.JLabel" name="lbl_ShieldType">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Shield type"/>
               </Properties>
@@ -647,7 +678,7 @@
                 <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
               </AccessibilityProperties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txt_AmmoType">
+            <Component class="javax.swing.JLabel" name="lbl_AmmoType">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ammo type"/>
               </Properties>
@@ -655,7 +686,7 @@
                 <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
               </AccessibilityProperties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txt_Slot">
+            <Component class="javax.swing.JLabel" name="lbl_Slot">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Slot"/>
               </Properties>
@@ -663,7 +694,7 @@
                 <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
               </AccessibilityProperties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txt_WeaponLVL">
+            <Component class="javax.swing.JLabel" name="lbl_WeaponLVL">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Weapon lvl"/>
               </Properties>
@@ -1170,7 +1201,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="txt_Normal" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_Normal" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="327" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
@@ -1179,12 +1210,12 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="txf_OnEquip" alignment="0" min="-2" pref="390" max="-2" attributes="0"/>
-                                          <Component id="txt_OnEquip" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_OnEquip" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="txf_OnUnequip" min="-2" pref="390" max="-2" attributes="0"/>
-                                          <Component id="txt_OnUnequip" linkSize="2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_OnUnequip" linkSize="2" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -1198,13 +1229,13 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txt_Normal" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_Normal" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="txf_Script" min="-2" pref="20" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txt_OnEquip" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txt_OnUnequip" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_OnEquip" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_OnUnequip" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1223,17 +1254,17 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txf_OnUnequip">
             </Component>
-            <Component class="javax.swing.JLabel" name="txt_Normal">
+            <Component class="javax.swing.JLabel" name="lbl_Normal">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Normal"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txt_OnEquip">
+            <Component class="javax.swing.JLabel" name="lbl_OnEquip">
               <Properties>
                 <Property name="text" type="java.lang.String" value="OnEquip"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txt_OnUnequip">
+            <Component class="javax.swing.JLabel" name="lbl_OnUnequip">
               <Properties>
                 <Property name="text" type="java.lang.String" value="OnUnequip"/>
               </Properties>
@@ -1256,58 +1287,58 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel10" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="lbl_FemaleAct" min="-2" pref="130" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextField10" linkSize="6" min="-2" pref="605" max="-2" attributes="0"/>
+                              <Component id="txf_FemaleAct" linkSize="6" min="-2" pref="605" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jButton8" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="btn_FemaleACT" min="-2" pref="45" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel8" linkSize="3" alignment="0" pref="130" max="32767" attributes="0"/>
-                                  <Component id="jLabel9" linkSize="3" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" linkSize="3" alignment="0" pref="130" max="32767" attributes="0"/>
-                                  <Component id="jLabel5" linkSize="3" alignment="0" pref="130" max="32767" attributes="0"/>
-                                  <Component id="jLabel7" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="lbl_Collection" linkSize="3" alignment="0" pref="130" max="32767" attributes="0"/>
+                                  <Component id="lbl_Male_Spr" linkSize="3" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="lbl_DropSpr" linkSize="3" alignment="0" pref="130" max="32767" attributes="0"/>
+                                  <Component id="lbl_Male_Act" linkSize="3" alignment="0" pref="130" max="32767" attributes="0"/>
+                                  <Component id="lbl_ImageItem" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField4" linkSize="6" alignment="0" pref="605" max="32767" attributes="0"/>
-                                  <Component id="jTextField5" linkSize="6" alignment="0" pref="605" max="32767" attributes="0"/>
-                                  <Component id="jTextField6" linkSize="6" alignment="0" pref="605" max="32767" attributes="0"/>
-                                  <Component id="jTextField3" linkSize="6" pref="605" max="32767" attributes="0"/>
-                                  <Component id="jTextField7" linkSize="6" alignment="0" pref="605" max="32767" attributes="0"/>
+                                  <Component id="txf_DropSpr" linkSize="6" alignment="0" pref="605" max="32767" attributes="0"/>
+                                  <Component id="txf_ImageItem" linkSize="6" alignment="0" pref="605" max="32767" attributes="0"/>
+                                  <Component id="txf_Collection" linkSize="6" alignment="0" pref="605" max="32767" attributes="0"/>
+                                  <Component id="txf_MaleAct" linkSize="6" pref="605" max="32767" attributes="0"/>
+                                  <Component id="txf_MaleSpr" linkSize="6" alignment="0" pref="605" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jButton4" min="-2" pref="45" max="-2" attributes="0"/>
-                                  <Component id="jButton5" min="-2" pref="45" max="-2" attributes="0"/>
-                                  <Component id="jButton3" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
-                                  <Component id="jButton2" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
-                                  <Component id="jButton1" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="btn_MaleACT" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="btn_MaleSPR" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="btn_DropSPR" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="btn_ImageItem" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="btn_Collection" min="-2" pref="45" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jLabel1" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane1" pref="400" max="32767" attributes="0"/>
-                                  <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lbl_IdentifiedName" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="lbl_IdentifiedDesc" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="slp_IdenfifiedDesc" pref="400" max="32767" attributes="0"/>
+                                  <Component id="txf_IdentifiedName" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jLabel4" min="-2" pref="200" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" min="-2" pref="200" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane2" pref="400" max="32767" attributes="0"/>
-                                  <Component id="jTextField2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="lbl_UnidentifiedDesc" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="lbl_UnidentifiedName" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="slp_UnidenfifiedDesc" pref="400" max="32767" attributes="0"/>
+                                  <Component id="txf_UnidentifiedName" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel12" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="lbl_FemaleSpr" min="-2" pref="130" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextField12" linkSize="6" min="-2" pref="605" max="-2" attributes="0"/>
+                              <Component id="txf_FemaleSpr" linkSize="6" min="-2" pref="605" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jButton9" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="btn_FemaleSPR" min="-2" pref="45" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -1319,70 +1350,70 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_IdentifiedName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_UnidentifiedName" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField1" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="jTextField2" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="txf_IdentifiedName" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="txf_UnidentifiedName" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_IdentifiedDesc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_UnidentifiedDesc" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" pref="221" max="-2" attributes="0"/>
+                              <Component id="slp_IdenfifiedDesc" min="-2" pref="221" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                              <Component id="jScrollPane2" max="32767" attributes="0"/>
+                              <Component id="slp_UnidenfifiedDesc" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField12" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton9" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="txf_FemaleSpr" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="lbl_FemaleSpr" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_FemaleSPR" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField10" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton8" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="txf_FemaleAct" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="lbl_FemaleAct" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_FemaleACT" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField7" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton5" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="txf_MaleSpr" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="lbl_Male_Spr" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_MaleSPR" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField3" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton4" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="txf_MaleAct" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="lbl_Male_Act" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_MaleACT" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField4" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="jButton3" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="lbl_DropSpr" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txf_DropSpr" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="btn_DropSPR" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField5" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="jButton2" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txf_ImageItem" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="btn_ImageItem" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="lbl_ImageItem" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField6" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="jButton1" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txf_Collection" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="btn_Collection" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="lbl_Collection" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -1390,21 +1421,32 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Identified Name"/>
-              </Properties>
+            <Component class="javax.swing.JTextField" name="txf_IdentifiedName">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="txf_UnidentifiedName">
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+            <Component class="javax.swing.JTextField" name="txf_FemaleSpr">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txf_FemaleAct">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txf_MaleSpr">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txf_MaleAct">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txf_DropSpr">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txf_ImageItem">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txf_Collection">
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="slp_IdenfifiedDesc">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jTextArea1">
+                <Component class="javax.swing.JTextArea" name="txa_IdenfifiedDesc">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="lineWrap" type="boolean" value="true"/>
@@ -1414,21 +1456,14 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel2">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Unidentified Name"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField2">
-            </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+            <Container class="javax.swing.JScrollPane" name="slp_UnidenfifiedDesc">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jTextArea2">
+                <Component class="javax.swing.JTextArea" name="txa_UnidenfifiedDesc">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="lineWrap" type="boolean" value="true"/>
@@ -1437,98 +1472,94 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel3">
+            <Component class="javax.swing.JButton" name="btn_Collection">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="..."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btn_ImageItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="..."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btn_DropSPR">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="..."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btn_MaleACT">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="..."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btn_MaleSPR">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="..."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btn_FemaleACT">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="..."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btn_FemaleSPR">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="..."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_IdentifiedName">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Identified name"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_UnidentifiedName">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Unidentified name"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_IdentifiedDesc">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Identified Description"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel4">
+            <Component class="javax.swing.JLabel" name="lbl_UnidentifiedDesc">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Unidentified Description"/>
+                <Property name="text" type="java.lang.String" value="Unidentified description"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField3">
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField4">
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField5">
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField6">
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="..."/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="..."/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="..."/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton4">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="..."/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel5">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Male equip ACT"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel6">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Drop SPR"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel7">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Image Item"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel8">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Collection"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField7">
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton5">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="..."/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel9">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Male equip SPR "/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel10">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Female equip ACT"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField10">
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton8">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="..."/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel12">
+            <Component class="javax.swing.JLabel" name="lbl_FemaleSpr">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Female equip SPR"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField12">
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton9">
+            <Component class="javax.swing.JLabel" name="lbl_FemaleAct">
               <Properties>
-                <Property name="text" type="java.lang.String" value="..."/>
+                <Property name="text" type="java.lang.String" value="Female equip ACT"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_Male_Spr">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Male equip SPR "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_Male_Act">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Male equip ACT"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_DropSpr">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Drop SPR"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_ImageItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Image Item"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_Collection">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Collection folder"/>
               </Properties>
             </Component>
           </SubComponents>

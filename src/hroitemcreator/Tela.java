@@ -1,12 +1,12 @@
 package hroitemcreator;
+
+import javax.swing.JOptionPane;
+
 /**
  * @author hauren
  */
 public class Tela extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Tela
-     */
     public Tela() {
         initComponents();
     }
@@ -18,10 +18,10 @@ public class Tela extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jTextField16 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
+        tab_Panel = new javax.swing.JTabbedPane();
         pan_Item = new javax.swing.JPanel();
         txf_AegisName = new javax.swing.JTextField();
-        txf_Name = new javax.swing.JTextField();
+        txf_ID = new javax.swing.JTextField();
         txf_Sell = new javax.swing.JTextField();
         txf_Buy = new javax.swing.JTextField();
         txf_Attack = new javax.swing.JTextField();
@@ -30,7 +30,7 @@ public class Tela extends javax.swing.JFrame {
         txf_Weight = new javax.swing.JTextField();
         txf_ViwerID = new javax.swing.JTextField();
         txf_WeaponLVL = new javax.swing.JTextField();
-        txf_ID = new javax.swing.JTextField();
+        txf_Name = new javax.swing.JTextField();
         cbx_ItemType = new javax.swing.JComboBox<>();
         cbx_Refinable = new javax.swing.JComboBox<>();
         cbx_Gender = new javax.swing.JComboBox<>();
@@ -39,25 +39,25 @@ public class Tela extends javax.swing.JFrame {
         cbx_AmmoType = new javax.swing.JComboBox<>();
         cbx_Slot = new javax.swing.JComboBox<>();
         cbx_WeaponLVL = new javax.swing.JComboBox<>();
-        txt_AegisName = new javax.swing.JLabel();
-        txt_Name = new javax.swing.JLabel();
-        txt_Sell = new javax.swing.JLabel();
-        txt_Buy = new javax.swing.JLabel();
-        txt_Attack = new javax.swing.JLabel();
-        txt_Defense = new javax.swing.JLabel();
-        txt_Range = new javax.swing.JLabel();
-        txt_Weight = new javax.swing.JLabel();
-        txt_ViwerID = new javax.swing.JLabel();
-        txt_EquipLevel = new javax.swing.JLabel();
-        txt_ID = new javax.swing.JLabel();
-        txt_ItemType = new javax.swing.JLabel();
-        txt_Refinable = new javax.swing.JLabel();
-        txt_Gender = new javax.swing.JLabel();
-        txt_WeaponType = new javax.swing.JLabel();
-        txt_ShieldType = new javax.swing.JLabel();
-        txt_AmmoType = new javax.swing.JLabel();
-        txt_Slot = new javax.swing.JLabel();
-        txt_WeaponLVL = new javax.swing.JLabel();
+        lbl_AegisName = new javax.swing.JLabel();
+        lbl_ID = new javax.swing.JLabel();
+        lbl_Sell = new javax.swing.JLabel();
+        lbl_Buy = new javax.swing.JLabel();
+        lbl_Attack = new javax.swing.JLabel();
+        lbl_Defense = new javax.swing.JLabel();
+        lbl_Range = new javax.swing.JLabel();
+        lbl_Weight = new javax.swing.JLabel();
+        lbl_ViwerID = new javax.swing.JLabel();
+        lbl_EquipLevel = new javax.swing.JLabel();
+        lbl_Name = new javax.swing.JLabel();
+        lbl_ItemType = new javax.swing.JLabel();
+        lbl_Refinable = new javax.swing.JLabel();
+        lbl_Gender = new javax.swing.JLabel();
+        lbl_WeaponType = new javax.swing.JLabel();
+        lbl_ShieldType = new javax.swing.JLabel();
+        lbl_AmmoType = new javax.swing.JLabel();
+        lbl_Slot = new javax.swing.JLabel();
+        lbl_WeaponLVL = new javax.swing.JLabel();
         pan_EquipedBy = new javax.swing.JPanel();
         ckb_NormalJobs = new javax.swing.JCheckBox();
         ckb_UpperJobs = new javax.swing.JCheckBox();
@@ -116,43 +116,45 @@ public class Tela extends javax.swing.JFrame {
         txf_Script = new javax.swing.JTextField();
         txf_OnEquip = new javax.swing.JTextField();
         txf_OnUnequip = new javax.swing.JTextField();
-        txt_Normal = new javax.swing.JLabel();
-        txt_OnEquip = new javax.swing.JLabel();
-        txt_OnUnequip = new javax.swing.JLabel();
+        lbl_Normal = new javax.swing.JLabel();
+        lbl_OnEquip = new javax.swing.JLabel();
+        lbl_OnUnequip = new javax.swing.JLabel();
         pan_Data = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jButton8 = new javax.swing.JButton();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
-        jButton9 = new javax.swing.JButton();
+        txf_IdentifiedName = new javax.swing.JTextField();
+        txf_UnidentifiedName = new javax.swing.JTextField();
+        txf_FemaleSpr = new javax.swing.JTextField();
+        txf_FemaleAct = new javax.swing.JTextField();
+        txf_MaleSpr = new javax.swing.JTextField();
+        txf_MaleAct = new javax.swing.JTextField();
+        txf_DropSpr = new javax.swing.JTextField();
+        txf_ImageItem = new javax.swing.JTextField();
+        txf_Collection = new javax.swing.JTextField();
+        slp_IdenfifiedDesc = new javax.swing.JScrollPane();
+        txa_IdenfifiedDesc = new javax.swing.JTextArea();
+        slp_UnidenfifiedDesc = new javax.swing.JScrollPane();
+        txa_UnidenfifiedDesc = new javax.swing.JTextArea();
+        btn_Collection = new javax.swing.JButton();
+        btn_ImageItem = new javax.swing.JButton();
+        btn_DropSPR = new javax.swing.JButton();
+        btn_MaleACT = new javax.swing.JButton();
+        btn_MaleSPR = new javax.swing.JButton();
+        btn_FemaleACT = new javax.swing.JButton();
+        btn_FemaleSPR = new javax.swing.JButton();
+        lbl_IdentifiedName = new javax.swing.JLabel();
+        lbl_UnidentifiedName = new javax.swing.JLabel();
+        lbl_IdentifiedDesc = new javax.swing.JLabel();
+        lbl_UnidentifiedDesc = new javax.swing.JLabel();
+        lbl_FemaleSpr = new javax.swing.JLabel();
+        lbl_FemaleAct = new javax.swing.JLabel();
+        lbl_Male_Spr = new javax.swing.JLabel();
+        lbl_Male_Act = new javax.swing.JLabel();
+        lbl_DropSpr = new javax.swing.JLabel();
+        lbl_ImageItem = new javax.swing.JLabel();
+        lbl_Collection = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         men_File = new javax.swing.JMenu();
+        mei_New = new javax.swing.JMenuItem();
+        mei_Save = new javax.swing.JMenuItem();
         mei_Exit = new javax.swing.JMenuItem();
         men_Language = new javax.swing.JMenu();
         mei_English = new javax.swing.JMenuItem();
@@ -165,59 +167,73 @@ public class Tela extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
+        tab_Panel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tab_PanelMouseClicked(evt);
+            }
+        });
+
         cbx_ItemType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Healing", "Usable", "Misc", "Weapon", "Armor", "Card", "Pet Egg", "Pet Equipment", "Arrow/Ammunition", "Other" }));
+        cbx_ItemType.setSelectedIndex(-1);
 
         cbx_Refinable.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Yes", "No" }));
+        cbx_Refinable.setSelectedIndex(-1);
 
         cbx_Gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Both", "Male", "Female" }));
+        cbx_Gender.setSelectedIndex(-1);
 
-        cbx_WeaponType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Daggers", "1-Handed Swords", "2-Handed Swords", "1-Handed Spears", "2-Handed Spears", "1-Handed Axes", "2-Handed Axes", "Maces", "Wand/Staff", "Bows/Crossbows", "Knuckle Weapons", "Instrument", "Whips", "Books", "Katars", "Revolvers", "Rifles", "Shotguns", "Gatling guns", "Grenade launcher", "Fuuma shuriken" }));
+        cbx_WeaponType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Daggers", "1-Handed Swords", "2-Handed Swords", "1-Handed Spears", "2-Handed Spears", "1-Handed Axes", "2-Handed Axes", "Maces", "Wand/Staff", "Bows/Crossbows", "Knuckle Weapons", "Musicas instrument", "Whips", "Books", "Katars", "Revolvers", "Rifles", "Shotguns", "Gatling guns", "Grenade launcher", "Fuuma shuriken" }));
+        cbx_WeaponType.setSelectedIndex(-1);
 
-        cbx_ShieldType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Novice Guard", "Buckler", "Shield, Holy Guard", "Mirror Shield" }));
+        cbx_ShieldType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Novice Guard", "Buckler", "Shield", "Holy Guard", "Mirror Shield" }));
+        cbx_ShieldType.setSelectedIndex(-1);
 
         cbx_AmmoType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arrows", "Daggers", "Bullets", "Shells", "Grenades", "Shuriken", "Kunai", "Cannonballs", "Sling Item" }));
+        cbx_AmmoType.setSelectedIndex(-1);
 
         cbx_Slot.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4" }));
+        cbx_Slot.setSelectedIndex(-1);
 
         cbx_WeaponLVL.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" }));
+        cbx_WeaponLVL.setSelectedIndex(-1);
 
-        txt_AegisName.setText("Aegis Name");
+        lbl_AegisName.setText("Aegis Name");
 
-        txt_Name.setText("Name");
+        lbl_ID.setText("ID");
 
-        txt_Sell.setText("Sell");
+        lbl_Sell.setText("Sell");
 
-        txt_Buy.setText("Buy");
+        lbl_Buy.setText("Buy");
 
-        txt_Attack.setText("Attack");
+        lbl_Attack.setText("Attack");
 
-        txt_Defense.setText("Defense");
+        lbl_Defense.setText("Defense");
 
-        txt_Range.setText("Range");
+        lbl_Range.setText("Range");
 
-        txt_Weight.setText("Weight");
+        lbl_Weight.setText("Weight");
 
-        txt_ViwerID.setText("Viwer ID");
+        lbl_ViwerID.setText("Viwer ID");
 
-        txt_EquipLevel.setText("Equip lvl");
+        lbl_EquipLevel.setText("Equip lvl");
 
-        txt_ID.setText("ID");
+        lbl_Name.setText("Name");
 
-        txt_ItemType.setText("Item type");
+        lbl_ItemType.setText("Item type");
 
-        txt_Refinable.setText("Refinable");
+        lbl_Refinable.setText("Refinable");
 
-        txt_Gender.setText("Gender");
+        lbl_Gender.setText("Gender");
 
-        txt_WeaponType.setText("Weapon type");
+        lbl_WeaponType.setText("Weapon type");
 
-        txt_ShieldType.setText("Shield type");
+        lbl_ShieldType.setText("Shield type");
 
-        txt_AmmoType.setText("Ammo type");
+        lbl_AmmoType.setText("Ammo type");
 
-        txt_Slot.setText("Slot");
+        lbl_Slot.setText("Slot");
 
-        txt_WeaponLVL.setText("Weapon lvl");
+        lbl_WeaponLVL.setText("Weapon lvl");
 
         javax.swing.GroupLayout pan_ItemLayout = new javax.swing.GroupLayout(pan_Item);
         pan_Item.setLayout(pan_ItemLayout);
@@ -233,65 +249,65 @@ public class Tela extends javax.swing.JFrame {
                         .addComponent(cbx_ItemType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(pan_ItemLayout.createSequentialGroup()
                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_Buy, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_Buy, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txf_Buy, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cbx_Refinable, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txt_Refinable, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(lbl_Refinable, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(pan_ItemLayout.createSequentialGroup()
                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_Attack, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_Attack, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txf_Attack, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cbx_Gender, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txt_Gender, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(lbl_Gender, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(pan_ItemLayout.createSequentialGroup()
                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_Defense, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_Defense, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txf_Defense, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cbx_WeaponType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txt_WeaponType, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(lbl_WeaponType, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(pan_ItemLayout.createSequentialGroup()
                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_Range, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_Range, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txf_Range, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cbx_ShieldType, 0, 666, Short.MAX_VALUE)
-                            .addComponent(txt_ShieldType, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(lbl_ShieldType, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(pan_ItemLayout.createSequentialGroup()
                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txf_Weight, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_Weight, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_Weight, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cbx_AmmoType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txt_AmmoType, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(lbl_AmmoType, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(pan_ItemLayout.createSequentialGroup()
                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txf_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_Sell, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txf_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_Sell, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txf_ID)
+                            .addComponent(txf_Name)
                             .addGroup(pan_ItemLayout.createSequentialGroup()
                                 .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txt_ItemType, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txt_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lbl_ItemType, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbl_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(pan_ItemLayout.createSequentialGroup()
                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_ViwerID, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_ViwerID, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txf_ViwerID, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(12, 12, 12)
                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pan_ItemLayout.createSequentialGroup()
-                                .addComponent(txt_Slot, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl_Slot, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(cbx_Slot, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(pan_ItemLayout.createSequentialGroup()
@@ -300,16 +316,16 @@ public class Tela extends javax.swing.JFrame {
                         .addComponent(cbx_WeaponLVL, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(pan_ItemLayout.createSequentialGroup()
                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_AegisName, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_AegisName, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(pan_ItemLayout.createSequentialGroup()
-                                .addComponent(txt_EquipLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(txt_WeaponLVL, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(lbl_EquipLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lbl_WeaponLVL, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
-        pan_ItemLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txt_AegisName, txt_Attack, txt_Buy, txt_Defense, txt_EquipLevel, txt_Name, txt_Range, txt_Sell, txt_ViwerID, txt_Weight});
+        pan_ItemLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lbl_AegisName, lbl_Attack, lbl_Buy, lbl_Defense, lbl_EquipLevel, lbl_ID, lbl_Range, lbl_Sell, lbl_ViwerID, lbl_Weight});
 
         pan_ItemLayout.setVerticalGroup(
             pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -323,7 +339,7 @@ public class Tela extends javax.swing.JFrame {
                                     .addGroup(pan_ItemLayout.createSequentialGroup()
                                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addGroup(pan_ItemLayout.createSequentialGroup()
-                                                .addComponent(txt_AegisName)
+                                                .addComponent(lbl_AegisName)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(txf_AegisName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -331,73 +347,73 @@ public class Tela extends javax.swing.JFrame {
                                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pan_ItemLayout.createSequentialGroup()
                                                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pan_ItemLayout.createSequentialGroup()
-                                                                .addComponent(txt_Name)
+                                                                .addComponent(lbl_ID)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(txf_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addComponent(txf_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                             .addGroup(pan_ItemLayout.createSequentialGroup()
-                                                                .addComponent(txt_ID)
+                                                                .addComponent(lbl_Name)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(txf_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                .addComponent(txf_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                            .addComponent(txt_Sell)
-                                                            .addComponent(txt_ItemType))
+                                                            .addComponent(lbl_Sell)
+                                                            .addComponent(lbl_ItemType))
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                             .addComponent(txf_Sell, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                             .addComponent(cbx_ItemType, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(txt_Buy)
+                                                        .addComponent(lbl_Buy)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(txf_Buy, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pan_ItemLayout.createSequentialGroup()
-                                                        .addComponent(txt_Refinable)
+                                                        .addComponent(lbl_Refinable)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(cbx_Refinable, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(txt_Attack)
+                                                .addComponent(lbl_Attack)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(txf_Attack, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(pan_ItemLayout.createSequentialGroup()
-                                                .addComponent(txt_Gender)
+                                                .addComponent(lbl_Gender)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(cbx_Gender, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txt_Defense)
+                                        .addComponent(lbl_Defense)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(txf_Defense, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(pan_ItemLayout.createSequentialGroup()
-                                        .addComponent(txt_WeaponType)
+                                        .addComponent(lbl_WeaponType)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(cbx_WeaponType, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_Range)
+                                .addComponent(lbl_Range)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txf_Range, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(pan_ItemLayout.createSequentialGroup()
-                                .addComponent(txt_ShieldType)
+                                .addComponent(lbl_ShieldType)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(cbx_ShieldType, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_Weight)
+                        .addComponent(lbl_Weight)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txf_Weight, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pan_ItemLayout.createSequentialGroup()
-                        .addComponent(txt_AmmoType)
+                        .addComponent(lbl_AmmoType)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cbx_AmmoType, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_ViwerID)
-                    .addComponent(txt_Slot))
+                    .addComponent(lbl_ViwerID)
+                    .addComponent(lbl_Slot))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txf_ViwerID, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbx_Slot, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_EquipLevel)
-                    .addComponent(txt_WeaponLVL))
+                    .addComponent(lbl_EquipLevel)
+                    .addComponent(lbl_WeaponLVL))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pan_ItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txf_WeaponLVL, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -405,27 +421,27 @@ public class Tela extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        txt_AegisName.getAccessibleContext().setAccessibleName("");
-        txt_Name.getAccessibleContext().setAccessibleName("");
-        txt_Sell.getAccessibleContext().setAccessibleName("");
-        txt_Buy.getAccessibleContext().setAccessibleName("");
-        txt_Attack.getAccessibleContext().setAccessibleName("");
-        txt_Defense.getAccessibleContext().setAccessibleName("");
-        txt_Range.getAccessibleContext().setAccessibleName("");
-        txt_Weight.getAccessibleContext().setAccessibleName("");
-        txt_ViwerID.getAccessibleContext().setAccessibleName("");
-        txt_EquipLevel.getAccessibleContext().setAccessibleName("");
-        txt_ID.getAccessibleContext().setAccessibleName("");
-        txt_ItemType.getAccessibleContext().setAccessibleName("");
-        txt_Refinable.getAccessibleContext().setAccessibleName("");
-        txt_Gender.getAccessibleContext().setAccessibleName("");
-        txt_WeaponType.getAccessibleContext().setAccessibleName("");
-        txt_ShieldType.getAccessibleContext().setAccessibleName("");
-        txt_AmmoType.getAccessibleContext().setAccessibleName("");
-        txt_Slot.getAccessibleContext().setAccessibleName("");
-        txt_WeaponLVL.getAccessibleContext().setAccessibleName("");
+        lbl_AegisName.getAccessibleContext().setAccessibleName("");
+        lbl_ID.getAccessibleContext().setAccessibleName("");
+        lbl_Sell.getAccessibleContext().setAccessibleName("");
+        lbl_Buy.getAccessibleContext().setAccessibleName("");
+        lbl_Attack.getAccessibleContext().setAccessibleName("");
+        lbl_Defense.getAccessibleContext().setAccessibleName("");
+        lbl_Range.getAccessibleContext().setAccessibleName("");
+        lbl_Weight.getAccessibleContext().setAccessibleName("");
+        lbl_ViwerID.getAccessibleContext().setAccessibleName("");
+        lbl_EquipLevel.getAccessibleContext().setAccessibleName("");
+        lbl_Name.getAccessibleContext().setAccessibleName("");
+        lbl_ItemType.getAccessibleContext().setAccessibleName("");
+        lbl_Refinable.getAccessibleContext().setAccessibleName("");
+        lbl_Gender.getAccessibleContext().setAccessibleName("");
+        lbl_WeaponType.getAccessibleContext().setAccessibleName("");
+        lbl_ShieldType.getAccessibleContext().setAccessibleName("");
+        lbl_AmmoType.getAccessibleContext().setAccessibleName("");
+        lbl_Slot.getAccessibleContext().setAccessibleName("");
+        lbl_WeaponLVL.getAccessibleContext().setAccessibleName("");
 
-        jTabbedPane2.addTab("Item", pan_Item);
+        tab_Panel.addTab("Item", pan_Item);
 
         ckb_NormalJobs.setText("Normal jobs");
 
@@ -716,13 +732,13 @@ public class Tela extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("Equiped by", pan_EquipedBy);
+        tab_Panel.addTab("Equiped by", pan_EquipedBy);
 
-        txt_Normal.setText("Normal");
+        lbl_Normal.setText("Normal");
 
-        txt_OnEquip.setText("OnEquip");
+        lbl_OnEquip.setText("OnEquip");
 
-        txt_OnUnequip.setText("OnUnequip");
+        lbl_OnUnequip.setText("OnUnequip");
 
         javax.swing.GroupLayout pan_ScriptLayout = new javax.swing.GroupLayout(pan_Script);
         pan_Script.setLayout(pan_ScriptLayout);
@@ -732,7 +748,7 @@ public class Tela extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(pan_ScriptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pan_ScriptLayout.createSequentialGroup()
-                        .addComponent(txt_Normal)
+                        .addComponent(lbl_Normal)
                         .addGap(327, 327, 327))
                     .addGroup(pan_ScriptLayout.createSequentialGroup()
                         .addGroup(pan_ScriptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -740,27 +756,27 @@ public class Tela extends javax.swing.JFrame {
                             .addGroup(pan_ScriptLayout.createSequentialGroup()
                                 .addGroup(pan_ScriptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txf_OnEquip, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txt_OnEquip))
+                                    .addComponent(lbl_OnEquip))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(pan_ScriptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txf_OnUnequip, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txt_OnUnequip))))
+                                    .addComponent(lbl_OnUnequip))))
                         .addContainerGap())))
         );
 
-        pan_ScriptLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txt_OnEquip, txt_OnUnequip});
+        pan_ScriptLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lbl_OnEquip, lbl_OnUnequip});
 
         pan_ScriptLayout.setVerticalGroup(
             pan_ScriptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pan_ScriptLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txt_Normal)
+                .addComponent(lbl_Normal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txf_Script, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pan_ScriptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_OnEquip)
-                    .addComponent(txt_OnUnequip))
+                    .addComponent(lbl_OnEquip)
+                    .addComponent(lbl_OnUnequip))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pan_ScriptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txf_OnEquip, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -768,54 +784,54 @@ public class Tela extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane2.addTab("Script", pan_Script);
+        tab_Panel.addTab("Script", pan_Script);
 
-        jLabel1.setText("Identified Name");
+        txa_IdenfifiedDesc.setColumns(20);
+        txa_IdenfifiedDesc.setLineWrap(true);
+        txa_IdenfifiedDesc.setRows(5);
+        txa_IdenfifiedDesc.setToolTipText("");
+        slp_IdenfifiedDesc.setViewportView(txa_IdenfifiedDesc);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setToolTipText("");
-        jScrollPane1.setViewportView(jTextArea1);
+        txa_UnidenfifiedDesc.setColumns(20);
+        txa_UnidenfifiedDesc.setLineWrap(true);
+        txa_UnidenfifiedDesc.setRows(5);
+        slp_UnidenfifiedDesc.setViewportView(txa_UnidenfifiedDesc);
 
-        jLabel2.setText("Unidentified Name");
+        btn_Collection.setText("...");
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setLineWrap(true);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        btn_ImageItem.setText("...");
 
-        jLabel3.setText("Identified Description");
+        btn_DropSPR.setText("...");
 
-        jLabel4.setText("Unidentified Description");
+        btn_MaleACT.setText("...");
 
-        jButton1.setText("...");
+        btn_MaleSPR.setText("...");
 
-        jButton2.setText("...");
+        btn_FemaleACT.setText("...");
 
-        jButton3.setText("...");
+        btn_FemaleSPR.setText("...");
 
-        jButton4.setText("...");
+        lbl_IdentifiedName.setText("Identified name");
 
-        jLabel5.setText("Male equip ACT");
+        lbl_UnidentifiedName.setText("Unidentified name");
 
-        jLabel6.setText("Drop SPR");
+        lbl_IdentifiedDesc.setText("Identified Description");
 
-        jLabel7.setText("Image Item");
+        lbl_UnidentifiedDesc.setText("Unidentified description");
 
-        jLabel8.setText("Collection");
+        lbl_FemaleSpr.setText("Female equip SPR");
 
-        jButton5.setText("...");
+        lbl_FemaleAct.setText("Female equip ACT");
 
-        jLabel9.setText("Male equip SPR ");
+        lbl_Male_Spr.setText("Male equip SPR ");
 
-        jLabel10.setText("Female equip ACT");
+        lbl_Male_Act.setText("Male equip ACT");
 
-        jButton8.setText("...");
+        lbl_DropSpr.setText("Drop SPR");
 
-        jLabel12.setText("Female equip SPR");
+        lbl_ImageItem.setText("Image Item");
 
-        jButton9.setText("...");
+        lbl_Collection.setText("Collection folder");
 
         javax.swing.GroupLayout pan_DataLayout = new javax.swing.GroupLayout(pan_Data);
         pan_Data.setLayout(pan_DataLayout);
@@ -825,122 +841,143 @@ public class Tela extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pan_DataLayout.createSequentialGroup()
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl_FemaleAct, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 605, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txf_FemaleAct, javax.swing.GroupLayout.PREFERRED_SIZE, 605, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btn_FemaleACT, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pan_DataLayout.createSequentialGroup()
                         .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbl_Collection, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                            .addComponent(lbl_Male_Spr, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_DropSpr, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                            .addComponent(lbl_Male_Act, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                            .addComponent(lbl_ImageItem, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE))
+                            .addComponent(txf_DropSpr, javax.swing.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE)
+                            .addComponent(txf_ImageItem, javax.swing.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE)
+                            .addComponent(txf_Collection, javax.swing.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE)
+                            .addComponent(txf_MaleAct, javax.swing.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE)
+                            .addComponent(txf_MaleSpr, javax.swing.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btn_MaleACT, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_MaleSPR, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_DropSPR, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_ImageItem, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_Collection, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(pan_DataLayout.createSequentialGroup()
                         .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
-                            .addComponent(jTextField1))
+                            .addComponent(lbl_IdentifiedName, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_IdentifiedDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(slp_IdenfifiedDesc, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                            .addComponent(txf_IdentifiedName))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
-                            .addComponent(jTextField2)))
+                            .addComponent(lbl_UnidentifiedDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_UnidentifiedName, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(slp_UnidenfifiedDesc, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                            .addComponent(txf_UnidentifiedName)))
                     .addGroup(pan_DataLayout.createSequentialGroup()
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl_FemaleSpr, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 605, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txf_FemaleSpr, javax.swing.GroupLayout.PREFERRED_SIZE, 605, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btn_FemaleSPR, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pan_DataLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel5, jLabel6, jLabel8, jLabel9});
+        pan_DataLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lbl_Collection, lbl_DropSpr, lbl_Male_Act, lbl_Male_Spr});
 
-        pan_DataLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextField10, jTextField12, jTextField3, jTextField4, jTextField5, jTextField6, jTextField7});
+        pan_DataLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txf_Collection, txf_DropSpr, txf_FemaleAct, txf_FemaleSpr, txf_ImageItem, txf_MaleAct, txf_MaleSpr});
 
         pan_DataLayout.setVerticalGroup(
             pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pan_DataLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
+                    .addComponent(lbl_IdentifiedName)
+                    .addComponent(lbl_UnidentifiedName))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txf_IdentifiedName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txf_UnidentifiedName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                    .addComponent(lbl_IdentifiedDesc)
+                    .addComponent(lbl_UnidentifiedDesc))
                 .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(pan_DataLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(slp_IdenfifiedDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pan_DataLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jScrollPane2)))
+                        .addComponent(slp_UnidenfifiedDesc)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txf_FemaleSpr, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_FemaleSpr)
+                    .addComponent(btn_FemaleSPR, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txf_FemaleAct, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_FemaleAct)
+                    .addComponent(btn_FemaleACT, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txf_MaleSpr, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_Male_Spr)
+                    .addComponent(btn_MaleSPR, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txf_MaleAct, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_Male_Act)
+                    .addComponent(btn_MaleACT, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbl_DropSpr)
+                    .addComponent(txf_DropSpr, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_DropSPR, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
+                    .addComponent(txf_ImageItem, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_ImageItem, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_ImageItem))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
+                    .addComponent(txf_Collection, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_Collection, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_Collection))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("Data", pan_Data);
+        tab_Panel.addTab("Data", pan_Data);
 
         men_File.setText("File");
 
+        mei_New.setText("New");
+        mei_New.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mei_NewActionPerformed(evt);
+            }
+        });
+        men_File.add(mei_New);
+
+        mei_Save.setText("Save");
+        mei_Save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mei_SaveActionPerformed(evt);
+            }
+        });
+        men_File.add(mei_Save);
+
         mei_Exit.setText("Exit");
+        mei_Exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mei_ExitActionPerformed(evt);
+            }
+        });
         men_File.add(mei_Exit);
 
         jMenuBar1.add(men_File);
@@ -955,7 +992,7 @@ public class Tela extends javax.swing.JFrame {
         });
         men_Language.add(mei_English);
 
-        mei_portugues.setText("Português");
+        mei_portugues.setText("Portuguese");
         mei_portugues.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mei_portuguesActionPerformed(evt);
@@ -973,13 +1010,13 @@ public class Tela extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 847, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tab_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, 847, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 529, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tab_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, 529, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 12, Short.MAX_VALUE))
         );
 
@@ -993,31 +1030,83 @@ public class Tela extends javax.swing.JFrame {
     private void mei_EnglishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mei_EnglishActionPerformed
         setLangEn();
     }//GEN-LAST:event_mei_EnglishActionPerformed
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
+    private void mei_NewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mei_NewActionPerformed
+        if(lang.equals("EN")){
+            int reply = JOptionPane.showConfirmDialog(null, "Are you sure?","Mew item?", JOptionPane.YES_NO_OPTION);
+            if(reply == JOptionPane.YES_OPTION){
+                NewItem();
+            }
+        }
+        else if(lang.equals("PT")){
+            int reply = JOptionPane.showConfirmDialog(null, "Você tem certeza?","Novo item?", JOptionPane.YES_NO_OPTION);
+            if(reply == JOptionPane.YES_OPTION){
+                NewItem();
+            }
+        }
+    }//GEN-LAST:event_mei_NewActionPerformed
+
+    private void mei_ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mei_ExitActionPerformed
+        if(lang.equals("EN")){
+            int reply = JOptionPane.showConfirmDialog(null, "Are you sure?","Exit?",JOptionPane.YES_NO_OPTION);
+            if(reply == JOptionPane.YES_OPTION){
+                System.exit(1);
+            }
+        }
+        else if (lang.equals("PT")){
+            int reply = JOptionPane.showConfirmDialog(null, "Você tem certeza?","Sair?",JOptionPane.YES_NO_OPTION);
+            if(reply == JOptionPane.YES_OPTION){
+                System.exit(1);
+            }
+        }
+    }//GEN-LAST:event_mei_ExitActionPerformed
+
+    private void mei_SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mei_SaveActionPerformed
+        
+    }//GEN-LAST:event_mei_SaveActionPerformed
+
+    private void tab_PanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab_PanelMouseClicked
+        switch (cbx_Gender.getSelectedIndex()) {
+            case 0:
+                txf_FemaleAct.setEnabled(true);
+                txf_FemaleSpr.setEnabled(true);
+                txf_MaleAct.setEnabled(true);
+                txf_MaleSpr.setEnabled(true);
+                btn_FemaleACT.setEnabled(true);
+                btn_MaleSPR.setEnabled(true);
+                btn_MaleACT.setEnabled(true);
+                btn_MaleSPR.setEnabled(true);
+                break;
+            case 1:
+                txf_FemaleAct.setEnabled(false);
+                txf_FemaleSpr.setEnabled(false);
+                txf_MaleAct.setEnabled(true);
+                txf_MaleSpr.setEnabled(true);
+                btn_FemaleACT.setEnabled(false);
+                btn_FemaleSPR.setEnabled(false);
+                btn_MaleACT.setEnabled(true);
+                btn_MaleSPR.setEnabled(true);
+                txf_FemaleAct.setText("");
+                txf_FemaleSpr.setText("");
+                break;
+            case 2:
+                txf_FemaleAct.setEnabled(true);
+                txf_FemaleSpr.setEnabled(true);
+                txf_MaleAct.setEnabled(false);
+                txf_MaleSpr.setEnabled(false);
+                btn_FemaleACT.setEnabled(true);
+                btn_FemaleSPR.setEnabled(true);
+                btn_MaleACT.setEnabled(false);
+                btn_MaleSPR.setEnabled(false);
+                txf_MaleAct.setText("");
+                txf_MaleSpr.setText("");
+                break;
+            default:
+                break;
+        }
+    }//GEN-LAST:event_tab_PanelMouseClicked
+    public static void main(String args[]) {
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Tela().setVisible(true);
@@ -1026,6 +1115,32 @@ public class Tela extends javax.swing.JFrame {
     }
     
     public void setLangPT(){ // void to set the language to portuguese
+        lang = "PT";
+        // translate tabbed panel
+        tab_Panel.setTitleAt(1, "Equipado por");
+        tab_Panel.setTitleAt(3, "Cliente");
+        //Comboboxes translate
+        i = cbx_ItemType.getSelectedIndex();
+        cbx_ItemType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cura", "Usavel", "Etc", "Arma", "Armadura", "Carta", "Ovo de bichinho", "Equipamento de bichinho", "Flechas/Munição", "Outros" }));
+        cbx_ItemType.setSelectedIndex(i);        
+        i = cbx_Refinable.getSelectedIndex();
+        cbx_Refinable.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sim", "Não" }));
+        cbx_Refinable.setSelectedIndex(i);
+        i = cbx_Gender.getSelectedIndex();
+        cbx_Gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ambos", "Masculino", "Feminino" }));
+        cbx_Gender.setSelectedIndex(i);
+        i = cbx_WeaponType.getSelectedIndex();
+        cbx_WeaponType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Adagas", "Espadas de 1 mão", "Espadas de 2 maõs", "Lança de 1 mão", "Lança de 2 maõs", "Machado de 1 mão", "Machado de 2 maõs", "Maças", "Varinha/Cajado", "Arco/Besta", "Punho", "Instrumento musicai", "Chicote", "Livro", "Katar", "Revólver", "Rifles", "Espingardas", "Gatling guns", "Lança granadas", "Shuriken fuuma" }));
+        cbx_WeaponType.setSelectedIndex(i);
+        i = cbx_ShieldType.getSelectedIndex();
+        cbx_ShieldType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escudo do aprendiz", "Broquel", "Escudo", "Escudo sagrado", "Escudo espelhado" }));
+        cbx_ShieldType.setSelectedIndex(i);
+        i = cbx_AmmoType.getSelectedIndex();
+        cbx_AmmoType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Flechas", "Adagas", "Balas", "Cartuchos", "Granadas", "Shuriken", "Kunai", "Balas de canhão", "Item Arremessaveis" }));
+        cbx_AmmoType.setSelectedIndex(i);
+        //focus on frist item
+        txf_AegisName.requestFocus();
+        //checkboxes translate
         ckb_Acolyte.setText("Noviço");
         ckb_Alchemist.setText("Alquimista");
         ckb_Archer.setText("Arqueiro");
@@ -1082,30 +1197,76 @@ public class Tela extends javax.swing.JFrame {
         ckb_CostumeMiddle.setText("[Visual] Meio");
         ckb_CostumeUpper.setText("[Visual] Topo");
         // Left Side
-        txt_AegisName.setText("Nome aegis");
-        txt_AmmoType.setText("Munição");
-        txt_Attack.setText("Ataque");
-        txt_Buy.setText("Preço Compra");
-        txt_Defense.setText("Defesa");
-        txt_EquipLevel.setText("Level p/ equipar");
-        txt_Gender.setText("Genero");
-        txt_ID.setText("ID");
-        txt_ItemType.setText("Tipo do item");
-        txt_Name.setText("Nome");
-        txt_Range.setText("Alcance");
-        txt_Refinable.setText("Refinavel?");
-        txt_Sell.setText("Preço venda");
-        txt_ShieldType.setText("Tipo do escudo");
-        txt_Slot.setText("Slot");
-        txt_ViwerID.setText("Viwer ID");
-        txt_WeaponLVL.setText("Level da arma");
-        txt_Weight.setText("Peso");
+        lbl_AegisName.setText("Nome aegis");
+        lbl_AmmoType.setText("Munição");
+        lbl_Attack.setText("Ataque");
+        lbl_Buy.setText("Preço Compra");
+        lbl_Defense.setText("Defesa");
+        lbl_EquipLevel.setText("Level p/ equipar");
+        lbl_Gender.setText("Genero");
+        lbl_Name.setText("Nome");
+        lbl_ItemType.setText("Tipo do item");
+        lbl_ID.setText("ID");
+        lbl_Range.setText("Alcance");
+        lbl_Refinable.setText("Refinavel?");
+        lbl_Sell.setText("Preço venda");
+        lbl_ShieldType.setText("Tipo do escudo");
+        lbl_Slot.setText("Slot");
+        lbl_ViwerID.setText("Viwer ID");
+        lbl_WeaponLVL.setText("Level da arma");
+        lbl_Weight.setText("Peso");
         //Script
-        txt_Normal.setText("Normal");
-        txt_OnEquip.setText("Ao equipar");
-        txt_OnUnequip.setText("Ao desequipar");
+        lbl_Normal.setText("Normal");
+        lbl_OnEquip.setText("Ao equipar");
+        lbl_OnUnequip.setText("Ao desequipar");
+        //Data
+        lbl_IdentifiedName.setText("Nome identificado");
+        lbl_UnidentifiedName.setText("Nome não identificado");
+        lbl_IdentifiedDesc.setText("Descrição identificado");
+        lbl_UnidentifiedDesc.setText("Descrição não identificado");
+        lbl_FemaleSpr.setText("SPR feminino");
+        lbl_FemaleAct.setText("ACT feminino");
+        lbl_Male_Spr.setText("SPR masculino");
+        lbl_Male_Act.setText("SPR masculino");
+        lbl_DropSpr.setText("SPR ao dropar");
+        lbl_ImageItem.setText("Imagem do item");
+        lbl_Collection.setText("Pasta collection");
+        //Menu
+        men_File.setText("Arquivo");
+        men_Language.setText("Idioma");
+        mei_English.setText("Inglês");
+        mei_portugues.setText("Português");
+        mei_Exit.setText("Sair");
+        mei_New.setText("Novo");
+        mei_Save.setText("Salvar");
     }
     public void setLangEn(){ // void to set the language to english
+        lang = "EN";
+        // tranlate tabbed panel
+        tab_Panel.setTitleAt(1, "Equiped by");
+        tab_Panel.setTitleAt(3, "Client");
+        //Comboboxes translate
+        i = cbx_ItemType.getSelectedIndex();
+        cbx_ItemType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Healing", "Usable", "Misc", "Weapon", "Armor", "Card", "Pet Egg", "Pet Equipment", "Arrow/Ammunition", "Other" }));
+        cbx_ItemType.setSelectedIndex(i);        
+        i = cbx_Refinable.getSelectedIndex();
+        cbx_Refinable.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Yes", "No" }));
+        cbx_Refinable.setSelectedIndex(i);
+        i = cbx_Gender.getSelectedIndex();
+        cbx_Gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Both", "Male", "Female" }));
+        cbx_Gender.setSelectedIndex(i);
+        i = cbx_WeaponType.getSelectedIndex();
+        cbx_WeaponType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Daggers", "1-Handed Swords", "2-Handed Swords", "1-Handed Spears", "2-Handed Spears", "1-Handed Axes", "2-Handed Axes", "Maces", "Wand/Staff", "Bows/Crossbows", "Knuckle Weapons", "Instrument", "Whips", "Books", "Katars", "Revolvers", "Rifles", "Shotguns", "Gatling guns", "Grenade launcher", "Fuuma shuriken" }));
+        cbx_WeaponType.setSelectedIndex(i);
+        i = cbx_ShieldType.getSelectedIndex();
+        cbx_ShieldType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Novice Guard", "Buckler", "Shield", "Holy Guard", "Mirror Shield" }));
+        cbx_ShieldType.setSelectedIndex(i);
+        i = cbx_AmmoType.getSelectedIndex();
+        cbx_AmmoType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arrows", "Daggers", "Bullets", "Shells", "Grenades", "Shuriken", "Kunai", "Cannonballs", "Sling Item" }));
+        cbx_AmmoType.setSelectedIndex(i);
+       //focus on frist item
+        txf_AegisName.requestFocus();
+        //checkboxes translate
         ckb_Acolyte.setText("Acolyte");
         ckb_Alchemist.setText("Alchemist");
         ckb_Archer.setText("Archer");
@@ -1162,31 +1323,157 @@ public class Tela extends javax.swing.JFrame {
         ckb_CostumeMiddle.setText("[Costume] Middle headgear");
         ckb_CostumeUpper.setText("[Costume] Upper headgear");
         // Left Side
-        txt_AegisName.setText("Aegis name");
-        txt_AmmoType.setText("Ammo type");
-        txt_Attack.setText("Attack");
-        txt_Buy.setText("Buy");
-        txt_Defense.setText("Defense");
-        txt_EquipLevel.setText("Equip lvl");
-        txt_Gender.setText("Gender");
-        txt_ID.setText("ID");
-        txt_ItemType.setText("Item type");
-        txt_Name.setText("Name");
-        txt_Range.setText("Range");
-        txt_Refinable.setText("Refinable");
-        txt_Sell.setText("Sell");
-        txt_ShieldType.setText("Shield type");
-        txt_Slot.setText("Slot");
-        txt_ViwerID.setText("Viwer ID");
-        txt_WeaponLVL.setText("Weapon lvl");
-        txt_Weight.setText("Weight");
+        lbl_AegisName.setText("Aegis name");
+        lbl_AmmoType.setText("Ammo type");
+        lbl_Attack.setText("Attack");
+        lbl_Buy.setText("Buy");
+        lbl_Defense.setText("Defense");
+        lbl_EquipLevel.setText("Equip lvl");
+        lbl_Gender.setText("Gender");
+        lbl_Name.setText("Name");
+        lbl_ItemType.setText("Item type");
+        lbl_ID.setText("ID");
+        lbl_Range.setText("Range");
+        lbl_Refinable.setText("Refinable");
+        lbl_Sell.setText("Sell");
+        lbl_ShieldType.setText("Shield type");
+        lbl_Slot.setText("Slot");
+        lbl_ViwerID.setText("Viwer ID");
+        lbl_WeaponLVL.setText("Weapon lvl");
+        lbl_Weight.setText("Weight");
         //Script
-        txt_Normal.setText("Normal");
-        txt_OnEquip.setText("OnEquip");
-        txt_OnUnequip.setText("OnUnequip");
+        lbl_Normal.setText("Normal");
+        lbl_OnEquip.setText("OnEquip");
+        lbl_OnUnequip.setText("OnUnequip");
+        //DATA
+        lbl_IdentifiedName.setText("Identified name");
+        lbl_UnidentifiedName.setText("Unidentified name");
+        lbl_IdentifiedDesc.setText("Identified description");
+        lbl_UnidentifiedDesc.setText("Unidentified description");
+        lbl_FemaleSpr.setText("Female equip SPR");
+        lbl_FemaleAct.setText("Female equip ACT");
+        lbl_Male_Spr.setText("Male equip SPR");
+        lbl_Male_Act.setText("Male equip ACT");
+        lbl_DropSpr.setText("Drop SPR");
+        lbl_ImageItem.setText("Image item");
+        lbl_Collection.setText("Collection folder");
+        //Menu
+        men_File.setText("File");
+        men_Language.setText("Language");
+        mei_English.setText("English");
+        mei_portugues.setText("Portuguese");
+        mei_Exit.setText("Exit");
+        mei_New.setText("New");
+        mei_Save.setText("Save");
+    }   
+    public void NewItem(){
+        // reset focus on frist item
+        tab_Panel.setSelectedIndex(0);
+        txf_AegisName.requestFocus();
+        // set text as null
+        txf_AegisName.setText("");
+        txf_Attack.setText("");
+        txf_Buy.setText("");
+        txf_Collection.setText("");
+        txf_Defense.setText("");
+        txf_DropSpr.setText("");
+        txf_FemaleAct.setText("");
+        txf_FemaleSpr.setText("");
+        txf_ID.setText("");
+        txf_IdentifiedName.setText("");
+        txf_ImageItem.setText("");
+        txf_MaleAct.setText("");
+        txf_MaleSpr.setText("");
+        txf_Name.setText("");
+        txf_OnEquip.setText("");
+        txf_OnUnequip.setText("");
+        txf_Range.setText("");
+        txf_Script.setText("");
+        txf_Sell.setText("");
+        txf_UnidentifiedName.setText("");
+        txf_ViwerID.setText("");
+        txf_WeaponLVL.setText("");
+        txf_Weight.setText("");
+        // set combo box default index
+        cbx_AmmoType.setSelectedIndex(-1);
+        cbx_Gender.setSelectedIndex(-1);
+        cbx_ItemType.setSelectedIndex(-1);
+        cbx_Refinable.setSelectedIndex(-1);
+        cbx_ShieldType.setSelectedIndex(-1);
+        cbx_Slot.setSelectedIndex(-1);
+        cbx_WeaponLVL.setSelectedIndex(-1);
+        cbx_WeaponType.setSelectedIndex(-1);
+        // check boxes set deafult
+        
+        ///
+        
+        ///
+        
+        ckb_Acolyte.setSelected(false);
+        ckb_Alchemist.setSelected(false);
+        ckb_Archer.setSelected(false);
+        ckb_Armor.setSelected(false);
+        ckb_Assassin.setSelected(false);
+        ckb_BardDancer.setSelected(false);
+        ckb_BlackSmith.setSelected(false);
+        ckb_Crusader.setSelected(false);
+        ckb_EveryJob.setSelected(false);
+        ckb_Gunslinger.setSelected(false);
+        ckb_Hunter.setSelected(false);
+        ckb_Knight.setSelected(false);
+        ckb_Mage.setSelected(false);
+        ckb_Merchant.setSelected(false);
+        ckb_Monk.setSelected(false);
+        ckb_Ninja.setSelected(false);
+        ckb_Novice.setSelected(false);
+        ckb_Priest.setSelected(false);
+        ckb_Rebelion.setSelected(false);
+        ckb_Rogue.setSelected(false);
+        ckb_Sage.setSelected(false);
+        ckb_SoulLinker.setSelected(false);
+        ckb_StarGladiator.setSelected(false);
+        ckb_Swordman.setSelected(false);
+        ckb_Taekwon.setSelected(false);
+        ckb_Thief.setSelected(false);
+        ckb_Wizard.setSelected(false);
+        ckb_KagerouOboro.setSelected(false);
+        // JOBS
+        ckb_NormalJobs.setSelected(false);
+        ckb_3rdJobs.setSelected(false);
+        ckb_Baby3rdJobs.setSelected(false);
+        ckb_BabyJobs.setSelected(false);
+        ckb_Upper3rdJobs.setSelected(false);
+        ckb_UpperJobs.setSelected(false);
+        // Equips
+        ckb_RightHand.setSelected(false);
+        ckb_Mantle.setSelected(false);
+        ckb_UpperHeadGear.setSelected(false);
+        ckb_LeftHand.setSelected(false);
+        ckb_LowerHeadGear.setSelected(false);
+        ckb_MiddleHeadGear.setSelected(false);
+        ckb_Accessory1.setSelected(false);
+        ckb_Accessory2.setSelected(false);
+        ckb_ShadowAccessory1.setSelected(false);
+        ckb_ShadowAccessory2.setSelected(false);
+        ckb_ShadowArmor.setSelected(false);
+        ckb_ShadowMantle.setSelected(false);
+        ckb_ShadowShield.setSelected(false);
+        ckb_ShadowShoes.setSelected(false);
+        ckb_ShadowWeapon.setSelected(false);
+        ckb_Shoes.setSelected(false);
+        ckb_CostumeLower.setSelected(false);
+        ckb_CostumeMiddle.setSelected(false);
+        ckb_CostumeUpper.setSelected(false);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_Collection;
+    private javax.swing.JButton btn_DropSPR;
+    private javax.swing.JButton btn_FemaleACT;
+    private javax.swing.JButton btn_FemaleSPR;
+    private javax.swing.JButton btn_ImageItem;
+    private javax.swing.JButton btn_MaleACT;
+    private javax.swing.JButton btn_MaleSPR;
     private javax.swing.JComboBox<String> cbx_AmmoType;
     private javax.swing.JComboBox<String> cbx_Gender;
     private javax.swing.JComboBox<String> cbx_ItemType;
@@ -1248,45 +1535,48 @@ public class Tela extends javax.swing.JFrame {
     private javax.swing.JCheckBox ckb_UpperHeadGear;
     private javax.swing.JCheckBox ckb_UpperJobs;
     private javax.swing.JCheckBox ckb_Wizard;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JLabel lbl_AegisName;
+    private javax.swing.JLabel lbl_AmmoType;
+    private javax.swing.JLabel lbl_Attack;
+    private javax.swing.JLabel lbl_Buy;
+    private javax.swing.JLabel lbl_Collection;
+    private javax.swing.JLabel lbl_Defense;
+    private javax.swing.JLabel lbl_DropSpr;
+    private javax.swing.JLabel lbl_EquipLevel;
+    private javax.swing.JLabel lbl_FemaleAct;
+    private javax.swing.JLabel lbl_FemaleSpr;
+    private javax.swing.JLabel lbl_Gender;
+    private javax.swing.JLabel lbl_ID;
+    private javax.swing.JLabel lbl_IdentifiedDesc;
+    private javax.swing.JLabel lbl_IdentifiedName;
+    private javax.swing.JLabel lbl_ImageItem;
+    private javax.swing.JLabel lbl_ItemType;
+    private javax.swing.JLabel lbl_Male_Act;
+    private javax.swing.JLabel lbl_Male_Spr;
+    private javax.swing.JLabel lbl_Name;
+    private javax.swing.JLabel lbl_Normal;
+    private javax.swing.JLabel lbl_OnEquip;
+    private javax.swing.JLabel lbl_OnUnequip;
+    private javax.swing.JLabel lbl_Range;
+    private javax.swing.JLabel lbl_Refinable;
+    private javax.swing.JLabel lbl_Sell;
+    private javax.swing.JLabel lbl_ShieldType;
+    private javax.swing.JLabel lbl_Slot;
+    private javax.swing.JLabel lbl_UnidentifiedDesc;
+    private javax.swing.JLabel lbl_UnidentifiedName;
+    private javax.swing.JLabel lbl_ViwerID;
+    private javax.swing.JLabel lbl_WeaponLVL;
+    private javax.swing.JLabel lbl_WeaponType;
+    private javax.swing.JLabel lbl_Weight;
     private javax.swing.JMenuItem mei_English;
     private javax.swing.JMenuItem mei_Exit;
+    private javax.swing.JMenuItem mei_New;
+    private javax.swing.JMenuItem mei_Save;
     private javax.swing.JMenuItem mei_portugues;
     private javax.swing.JMenu men_File;
     private javax.swing.JMenu men_Language;
@@ -1294,41 +1584,36 @@ public class Tela extends javax.swing.JFrame {
     private javax.swing.JPanel pan_EquipedBy;
     private javax.swing.JPanel pan_Item;
     private javax.swing.JPanel pan_Script;
+    private javax.swing.JScrollPane slp_IdenfifiedDesc;
+    private javax.swing.JScrollPane slp_UnidenfifiedDesc;
+    private javax.swing.JTabbedPane tab_Panel;
+    private javax.swing.JTextArea txa_IdenfifiedDesc;
+    private javax.swing.JTextArea txa_UnidenfifiedDesc;
     private javax.swing.JTextField txf_AegisName;
     private javax.swing.JTextField txf_Attack;
     private javax.swing.JTextField txf_Buy;
+    private javax.swing.JTextField txf_Collection;
     private javax.swing.JTextField txf_Defense;
+    private javax.swing.JTextField txf_DropSpr;
+    private javax.swing.JTextField txf_FemaleAct;
+    private javax.swing.JTextField txf_FemaleSpr;
     private javax.swing.JTextField txf_ID;
+    private javax.swing.JTextField txf_IdentifiedName;
+    private javax.swing.JTextField txf_ImageItem;
+    private javax.swing.JTextField txf_MaleAct;
+    private javax.swing.JTextField txf_MaleSpr;
     private javax.swing.JTextField txf_Name;
     private javax.swing.JTextField txf_OnEquip;
     private javax.swing.JTextField txf_OnUnequip;
     private javax.swing.JTextField txf_Range;
     private javax.swing.JTextField txf_Script;
     private javax.swing.JTextField txf_Sell;
+    private javax.swing.JTextField txf_UnidentifiedName;
     private javax.swing.JTextField txf_ViwerID;
     private javax.swing.JTextField txf_WeaponLVL;
     private javax.swing.JTextField txf_Weight;
-    private javax.swing.JLabel txt_AegisName;
-    private javax.swing.JLabel txt_AmmoType;
-    private javax.swing.JLabel txt_Attack;
-    private javax.swing.JLabel txt_Buy;
-    private javax.swing.JLabel txt_Defense;
-    private javax.swing.JLabel txt_EquipLevel;
-    private javax.swing.JLabel txt_Gender;
-    private javax.swing.JLabel txt_ID;
-    private javax.swing.JLabel txt_ItemType;
-    private javax.swing.JLabel txt_Name;
-    private javax.swing.JLabel txt_Normal;
-    private javax.swing.JLabel txt_OnEquip;
-    private javax.swing.JLabel txt_OnUnequip;
-    private javax.swing.JLabel txt_Range;
-    private javax.swing.JLabel txt_Refinable;
-    private javax.swing.JLabel txt_Sell;
-    private javax.swing.JLabel txt_ShieldType;
-    private javax.swing.JLabel txt_Slot;
-    private javax.swing.JLabel txt_ViwerID;
-    private javax.swing.JLabel txt_WeaponLVL;
-    private javax.swing.JLabel txt_WeaponType;
-    private javax.swing.JLabel txt_Weight;
     // End of variables declaration//GEN-END:variables
+    //My Variables
+    String lang = "EN";
+    int i;
 }
