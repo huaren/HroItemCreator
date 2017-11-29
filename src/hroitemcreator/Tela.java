@@ -1465,7 +1465,10 @@ public class Tela extends javax.swing.JFrame {
         ckb_CostumeMiddle.setSelected(false);
         ckb_CostumeUpper.setSelected(false);
     }
-
+    
+    //My Variables
+    String lang = "EN";
+    int i;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Collection;
     private javax.swing.JButton btn_DropSPR;
@@ -1613,7 +1616,4 @@ public class Tela extends javax.swing.JFrame {
     private javax.swing.JTextField txf_WeaponLVL;
     private javax.swing.JTextField txf_Weight;
     // End of variables declaration//GEN-END:variables
-    //My Variables
-    String lang = "EN";
-    int i;
 }
