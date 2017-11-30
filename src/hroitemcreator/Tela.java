@@ -1,5 +1,7 @@
 package hroitemcreator;
 
+import java.io.File;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 
 /**
@@ -1035,13 +1037,13 @@ public class Tela extends javax.swing.JFrame {
         if(lang.equals("EN")){
             int reply = JOptionPane.showConfirmDialog(null, "Are you sure?","Mew item?", JOptionPane.YES_NO_OPTION);
             if(reply == JOptionPane.YES_OPTION){
-                NewItem();
+                newItem();
             }
         }
         else if(lang.equals("PT")){
             int reply = JOptionPane.showConfirmDialog(null, "Você tem certeza?","Novo item?", JOptionPane.YES_NO_OPTION);
             if(reply == JOptionPane.YES_OPTION){
-                NewItem();
+                newItem();
             }
         }
     }//GEN-LAST:event_mei_NewActionPerformed
@@ -1062,7 +1064,7 @@ public class Tela extends javax.swing.JFrame {
     }//GEN-LAST:event_mei_ExitActionPerformed
 
     private void mei_SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mei_SaveActionPerformed
-        
+        makeFile();
     }//GEN-LAST:event_mei_SaveActionPerformed
 
     private void tab_PanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab_PanelMouseClicked
@@ -1366,7 +1368,7 @@ public class Tela extends javax.swing.JFrame {
         mei_New.setText("New");
         mei_Save.setText("Save");
     }   
-    public void NewItem(){
+    public void newItem(){
         // reset focus on frist item
         tab_Panel.setSelectedIndex(0);
         txf_AegisName.requestFocus();
@@ -1464,6 +1466,35 @@ public class Tela extends javax.swing.JFrame {
         ckb_CostumeLower.setSelected(false);
         ckb_CostumeMiddle.setSelected(false);
         ckb_CostumeUpper.setSelected(false);
+    }
+    public void makeFile(){
+        // folder
+        File db             = new File("Output/Emulator/db");
+        File system         = new File("Output/Client/system");
+        File drop           = new File("Output/Client/data/sprite/¾ÆÀÌÅÛ/");
+        File femaleSprite   = new File("Output/Client/data/sprite/¾Ç¼¼»ç¸®/¿©/");
+        File maleSprite     = new File("Output/Client/data/sprite/¾Ç¼¼»ç¸®/³²/");
+        File item           = new File("Output/Client/data/texture/À¯ÀúÀÎÅÍÆäÀÌ½º/item/");
+        File collection     = new File("Output/Client/data/texture/À¯ÀúÀÎÅÍÆäÀÌ½º/collection/");
+        
+        // make folders
+        db.mkdirs();
+        system.mkdirs();
+        drop.mkdirs();
+        femaleSprite.mkdirs();
+        maleSprite.mkdirs();
+        item.mkdirs();
+        collection.mkdirs();
+        // files
+        File itemdb = new File("Output/Emulator/db/item_db2.txt");
+        File iteminfo = new File("Output/Client/system/iteminfo.lub");
+        
+        try {
+            itemdb.createNewFile();
+            iteminfo.createNewFile();
+        } catch (IOException ex) {
+            
+        }
     }
     
     //My Variables
