@@ -1,6 +1,10 @@
 package hroitemcreator;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 
@@ -11,6 +15,7 @@ public class Tela extends javax.swing.JFrame {
 
     public Tela() {
         initComponents();
+        readItemDB();
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -153,6 +158,8 @@ public class Tela extends javax.swing.JFrame {
         lbl_DropSpr = new javax.swing.JLabel();
         lbl_ImageItem = new javax.swing.JLabel();
         lbl_Collection = new javax.swing.JLabel();
+        slp_UnidenfifiedDesc1 = new javax.swing.JScrollPane();
+        txa_itemdb = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
         men_File = new javax.swing.JMenu();
         mei_New = new javax.swing.JMenuItem();
@@ -871,7 +878,9 @@ public class Tela extends javax.swing.JFrame {
                             .addComponent(btn_Collection, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(pan_DataLayout.createSequentialGroup()
                         .addGroup(pan_DataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lbl_IdentifiedName, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pan_DataLayout.createSequentialGroup()
+                                .addComponent(lbl_IdentifiedName, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(16, 16, 16))
                             .addComponent(lbl_IdentifiedDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(slp_IdenfifiedDesc, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
                             .addComponent(txf_IdentifiedName))
@@ -956,6 +965,14 @@ public class Tela extends javax.swing.JFrame {
 
         tab_Panel.addTab("Data", pan_Data);
 
+        txa_itemdb.setEditable(false);
+        txa_itemdb.setColumns(20);
+        txa_itemdb.setLineWrap(true);
+        txa_itemdb.setRows(5);
+        slp_UnidenfifiedDesc1.setViewportView(txa_itemdb);
+
+        tab_Panel.addTab("Item db", slp_UnidenfifiedDesc1);
+
         men_File.setText("File");
 
         mei_New.setText("New");
@@ -1038,12 +1055,14 @@ public class Tela extends javax.swing.JFrame {
             int reply = JOptionPane.showConfirmDialog(null, "Are you sure?","Mew item?", JOptionPane.YES_NO_OPTION);
             if(reply == JOptionPane.YES_OPTION){
                 newItem();
+                readItemDB();
             }
         }
         else if(lang.equals("PT")){
             int reply = JOptionPane.showConfirmDialog(null, "Você tem certeza?","Novo item?", JOptionPane.YES_NO_OPTION);
             if(reply == JOptionPane.YES_OPTION){
                 newItem();
+                readItemDB();
             }
         }
     }//GEN-LAST:event_mei_NewActionPerformed
@@ -1064,47 +1083,50 @@ public class Tela extends javax.swing.JFrame {
     }//GEN-LAST:event_mei_ExitActionPerformed
 
     private void mei_SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mei_SaveActionPerformed
+        txa_itemdb.setText("");
         makeFile();
+        writeFile();
+        readItemDB();
     }//GEN-LAST:event_mei_SaveActionPerformed
 
     private void tab_PanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab_PanelMouseClicked
         switch (cbx_Gender.getSelectedIndex()) {
             case 0:
-                txf_FemaleAct.setEnabled(true);
-                txf_FemaleSpr.setEnabled(true);
-                txf_MaleAct.setEnabled(true);
-                txf_MaleSpr.setEnabled(true);
-                btn_FemaleACT.setEnabled(true);
-                btn_MaleSPR.setEnabled(true);
-                btn_MaleACT.setEnabled(true);
-                btn_MaleSPR.setEnabled(true);
-                break;
+            txf_FemaleAct.setEnabled(true);
+            txf_FemaleSpr.setEnabled(true);
+            txf_MaleAct.setEnabled(true);
+            txf_MaleSpr.setEnabled(true);
+            btn_FemaleACT.setEnabled(true);
+            btn_MaleSPR.setEnabled(true);
+            btn_MaleACT.setEnabled(true);
+            btn_MaleSPR.setEnabled(true);
+            break;
             case 1:
-                txf_FemaleAct.setEnabled(false);
-                txf_FemaleSpr.setEnabled(false);
-                txf_MaleAct.setEnabled(true);
-                txf_MaleSpr.setEnabled(true);
-                btn_FemaleACT.setEnabled(false);
-                btn_FemaleSPR.setEnabled(false);
-                btn_MaleACT.setEnabled(true);
-                btn_MaleSPR.setEnabled(true);
-                txf_FemaleAct.setText("");
-                txf_FemaleSpr.setText("");
-                break;
+            txf_FemaleAct.setEnabled(false);
+            txf_FemaleSpr.setEnabled(false);
+            txf_MaleAct.setEnabled(true);
+            txf_MaleSpr.setEnabled(true);
+            btn_FemaleACT.setEnabled(false);
+            btn_FemaleSPR.setEnabled(false);
+            btn_MaleACT.setEnabled(true);
+            btn_MaleSPR.setEnabled(true);
+            txf_FemaleAct.setText("");
+            txf_FemaleSpr.setText("");
+            break;
             case 2:
-                txf_FemaleAct.setEnabled(true);
-                txf_FemaleSpr.setEnabled(true);
-                txf_MaleAct.setEnabled(false);
-                txf_MaleSpr.setEnabled(false);
-                btn_FemaleACT.setEnabled(true);
-                btn_FemaleSPR.setEnabled(true);
-                btn_MaleACT.setEnabled(false);
-                btn_MaleSPR.setEnabled(false);
-                txf_MaleAct.setText("");
-                txf_MaleSpr.setText("");
-                break;
+            txf_FemaleAct.setEnabled(true);
+            txf_FemaleSpr.setEnabled(true);
+            txf_MaleAct.setEnabled(false);
+            txf_MaleSpr.setEnabled(false);
+            btn_FemaleACT.setEnabled(true);
+            btn_FemaleSPR.setEnabled(true);
+            btn_MaleACT.setEnabled(false);
+            btn_MaleSPR.setEnabled(false);
+            txf_MaleAct.setText("");
+            txf_MaleSpr.setText("");
+            break;
             default:
-                break;
+            break;
         }
     }//GEN-LAST:event_tab_PanelMouseClicked
     public static void main(String args[]) {
@@ -1369,6 +1391,7 @@ public class Tela extends javax.swing.JFrame {
         mei_Save.setText("Save");
     }   
     public void newItem(){
+        txa_itemdb.setText("");
         // reset focus on frist item
         tab_Panel.setSelectedIndex(0);
         txf_AegisName.requestFocus();
@@ -1406,11 +1429,6 @@ public class Tela extends javax.swing.JFrame {
         cbx_WeaponLVL.setSelectedIndex(-1);
         cbx_WeaponType.setSelectedIndex(-1);
         // check boxes set deafult
-        
-        ///
-        
-        ///
-        
         ckb_Acolyte.setSelected(false);
         ckb_Alchemist.setSelected(false);
         ckb_Archer.setSelected(false);
@@ -1468,16 +1486,6 @@ public class Tela extends javax.swing.JFrame {
         ckb_CostumeUpper.setSelected(false);
     }
     public void makeFile(){
-        // folder
-        File db             = new File("Output/Emulator/db");
-        File system         = new File("Output/Client/system");
-        File drop           = new File("Output/Client/data/sprite/¾ÆÀÌÅÛ/");
-        File femaleSprite   = new File("Output/Client/data/sprite/¾Ç¼¼»ç¸®/¿©/");
-        File maleSprite     = new File("Output/Client/data/sprite/¾Ç¼¼»ç¸®/³²/");
-        File item           = new File("Output/Client/data/texture/À¯ÀúÀÎÅÍÆäÀÌ½º/item/");
-        File collection     = new File("Output/Client/data/texture/À¯ÀúÀÎÅÍÆäÀÌ½º/collection/");
-        
-        // make folders
         db.mkdirs();
         system.mkdirs();
         drop.mkdirs();
@@ -1485,9 +1493,6 @@ public class Tela extends javax.swing.JFrame {
         maleSprite.mkdirs();
         item.mkdirs();
         collection.mkdirs();
-        // files
-        File itemdb = new File("Output/Emulator/db/item_db2.txt");
-        File iteminfo = new File("Output/Client/system/iteminfo.lub");
         
         try {
             itemdb.createNewFile();
@@ -1496,9 +1501,48 @@ public class Tela extends javax.swing.JFrame {
             
         }
     }
+    public void writeFile(){
+        try {
+            FileWriter itemdbW = new FileWriter(itemdb,true);
+            BufferedWriter itemdbWriter = new BufferedWriter(itemdbW);
+            
+            itemdbWriter.write(itemDbString+"\n");
+            
+            itemdbWriter.close();
+            itemdbW.close();
+        } catch (IOException ex) {
+        }
+    }
+    public void readItemDB(){
+        try {
+            FileReader itemdbR = new FileReader(itemdb);
+            BufferedReader itemdbReader =  new BufferedReader(itemdbR);
+            String line = itemdbReader.readLine();
+            
+            while(line != null){
+                txa_itemdb.setText(txa_itemdb.getText()+line+"\n");
+                line = itemdbReader.readLine();
+            }
+        } catch (Exception e) {
+        }
+    }
+    public void writeItemdb(){
+        
+    }
+    // Diretories
+    File db             = new File("Output/Emulator/db");
+    File system         = new File("Output/Client/system");
+    File drop           = new File("Output/Client/data/sprite/¾ÆÀÌÅÛ/");
+    File femaleSprite   = new File("Output/Client/data/sprite/¾Ç¼¼»ç¸®/¿©/");
+    File maleSprite     = new File("Output/Client/data/sprite/¾Ç¼¼»ç¸®/³²/");
+    File item           = new File("Output/Client/data/texture/À¯ÀúÀÎÅÍÆäÀÌ½º/item/");
+    File collection     = new File("Output/Client/data/texture/À¯ÀúÀÎÅÍÆäÀÌ½º/collection/");
     
+    File itemdb = new File("Output/Emulator/db/item_db2.txt");
+    File iteminfo = new File("Output/Client/system/iteminfo.lub");
     //My Variables
     String lang = "EN";
+    String itemDbString = "item1";
     int i;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Collection;
@@ -1620,9 +1664,11 @@ public class Tela extends javax.swing.JFrame {
     private javax.swing.JPanel pan_Script;
     private javax.swing.JScrollPane slp_IdenfifiedDesc;
     private javax.swing.JScrollPane slp_UnidenfifiedDesc;
+    private javax.swing.JScrollPane slp_UnidenfifiedDesc1;
     private javax.swing.JTabbedPane tab_Panel;
     private javax.swing.JTextArea txa_IdenfifiedDesc;
     private javax.swing.JTextArea txa_UnidenfifiedDesc;
+    private javax.swing.JTextArea txa_itemdb;
     private javax.swing.JTextField txf_AegisName;
     private javax.swing.JTextField txf_Attack;
     private javax.swing.JTextField txf_Buy;

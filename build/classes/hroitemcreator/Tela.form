@@ -1320,7 +1320,10 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="lbl_IdentifiedName" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lbl_IdentifiedName" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                  </Group>
                                   <Component id="lbl_IdentifiedDesc" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                   <Component id="slp_IdenfifiedDesc" pref="400" max="32767" attributes="0"/>
                                   <Component id="txf_IdentifiedName" alignment="0" max="32767" attributes="0"/>
@@ -1560,6 +1563,30 @@
             <Component class="javax.swing.JLabel" name="lbl_Collection">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Collection folder"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="slp_UnidenfifiedDesc1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Item db">
+                <Property name="tabTitle" type="java.lang.String" value="Item db"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="txa_itemdb">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="lineWrap" type="boolean" value="true"/>
+                <Property name="rows" type="int" value="5"/>
               </Properties>
             </Component>
           </SubComponents>
