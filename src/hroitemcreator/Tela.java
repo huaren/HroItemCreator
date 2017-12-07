@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  * @author hauren
@@ -17,6 +18,7 @@ public class Tela extends javax.swing.JFrame {
         initComponents();
         readItemDB();
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -1051,16 +1053,15 @@ public class Tela extends javax.swing.JFrame {
     }//GEN-LAST:event_mei_EnglishActionPerformed
 
     private void mei_NewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mei_NewActionPerformed
-        if(lang.equals("EN")){
-            int reply = JOptionPane.showConfirmDialog(null, "Are you sure?","Mew item?", JOptionPane.YES_NO_OPTION);
-            if(reply == JOptionPane.YES_OPTION){
+        if (lang.equals("EN")) {
+            int reply = JOptionPane.showConfirmDialog(null, "Are you sure?", "Mew item?", JOptionPane.YES_NO_OPTION);
+            if (reply == JOptionPane.YES_OPTION) {
                 newItem();
                 readItemDB();
             }
-        }
-        else if(lang.equals("PT")){
-            int reply = JOptionPane.showConfirmDialog(null, "Você tem certeza?","Novo item?", JOptionPane.YES_NO_OPTION);
-            if(reply == JOptionPane.YES_OPTION){
+        } else if (lang.equals("PT")) {
+            int reply = JOptionPane.showConfirmDialog(null, "Você tem certeza?", "Novo item?", JOptionPane.YES_NO_OPTION);
+            if (reply == JOptionPane.YES_OPTION) {
                 newItem();
                 readItemDB();
             }
@@ -1068,15 +1069,14 @@ public class Tela extends javax.swing.JFrame {
     }//GEN-LAST:event_mei_NewActionPerformed
 
     private void mei_ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mei_ExitActionPerformed
-        if(lang.equals("EN")){
-            int reply = JOptionPane.showConfirmDialog(null, "Are you sure?","Exit?",JOptionPane.YES_NO_OPTION);
-            if(reply == JOptionPane.YES_OPTION){
+        if (lang.equals("EN")) {
+            int reply = JOptionPane.showConfirmDialog(null, "Are you sure?", "Exit?", JOptionPane.YES_NO_OPTION);
+            if (reply == JOptionPane.YES_OPTION) {
                 System.exit(1);
             }
-        }
-        else if (lang.equals("PT")){
-            int reply = JOptionPane.showConfirmDialog(null, "Você tem certeza?","Sair?",JOptionPane.YES_NO_OPTION);
-            if(reply == JOptionPane.YES_OPTION){
+        } else if (lang.equals("PT")) {
+            int reply = JOptionPane.showConfirmDialog(null, "Você tem certeza?", "Sair?", JOptionPane.YES_NO_OPTION);
+            if (reply == JOptionPane.YES_OPTION) {
                 System.exit(1);
             }
         }
@@ -1090,77 +1090,90 @@ public class Tela extends javax.swing.JFrame {
     }//GEN-LAST:event_mei_SaveActionPerformed
 
     private void tab_PanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab_PanelMouseClicked
+        isEmpty();
+        if (checkBoxItem) {
+            JOptionPane.showMessageDialog(null, "Pode");
+        }
+        else if (!checkBoxItem) {
+            JOptionPane.showMessageDialog(null, "Não Pode");
+        }
         switch (cbx_Gender.getSelectedIndex()) {
             case 0:
-            txf_FemaleAct.setEnabled(true);
-            txf_FemaleSpr.setEnabled(true);
-            txf_MaleAct.setEnabled(true);
-            txf_MaleSpr.setEnabled(true);
-            btn_FemaleACT.setEnabled(true);
-            btn_MaleSPR.setEnabled(true);
-            btn_MaleACT.setEnabled(true);
-            btn_MaleSPR.setEnabled(true);
-            break;
+                txf_FemaleAct.setEnabled(true);
+                txf_FemaleSpr.setEnabled(true);
+                txf_MaleAct.setEnabled(true);
+                txf_MaleSpr.setEnabled(true);
+                btn_FemaleACT.setEnabled(true);
+                btn_MaleSPR.setEnabled(true);
+                btn_MaleACT.setEnabled(true);
+                btn_MaleSPR.setEnabled(true);
+                break;
             case 1:
-            txf_FemaleAct.setEnabled(false);
-            txf_FemaleSpr.setEnabled(false);
-            txf_MaleAct.setEnabled(true);
-            txf_MaleSpr.setEnabled(true);
-            btn_FemaleACT.setEnabled(false);
-            btn_FemaleSPR.setEnabled(false);
-            btn_MaleACT.setEnabled(true);
-            btn_MaleSPR.setEnabled(true);
-            txf_FemaleAct.setText("");
-            txf_FemaleSpr.setText("");
-            break;
+                txf_FemaleAct.setEnabled(false);
+                txf_FemaleSpr.setEnabled(false);
+                txf_MaleAct.setEnabled(true);
+                txf_MaleSpr.setEnabled(true);
+                btn_FemaleACT.setEnabled(false);
+                btn_FemaleSPR.setEnabled(false);
+                btn_MaleACT.setEnabled(true);
+                btn_MaleSPR.setEnabled(true);
+                txf_FemaleAct.setText("");
+                txf_FemaleSpr.setText("");
+                break;
             case 2:
-            txf_FemaleAct.setEnabled(true);
-            txf_FemaleSpr.setEnabled(true);
-            txf_MaleAct.setEnabled(false);
-            txf_MaleSpr.setEnabled(false);
-            btn_FemaleACT.setEnabled(true);
-            btn_FemaleSPR.setEnabled(true);
-            btn_MaleACT.setEnabled(false);
-            btn_MaleSPR.setEnabled(false);
-            txf_MaleAct.setText("");
-            txf_MaleSpr.setText("");
-            break;
+                txf_FemaleAct.setEnabled(true);
+                txf_FemaleSpr.setEnabled(true);
+                txf_MaleAct.setEnabled(false);
+                txf_MaleSpr.setEnabled(false);
+                btn_FemaleACT.setEnabled(true);
+                btn_FemaleSPR.setEnabled(true);
+                btn_MaleACT.setEnabled(false);
+                btn_MaleSPR.setEnabled(false);
+                txf_MaleAct.setText("");
+                txf_MaleSpr.setText("");
+                break;
             default:
-            break;
+                break;
         }
     }//GEN-LAST:event_tab_PanelMouseClicked
     public static void main(String args[]) {
-        
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Tela().setVisible(true);
             }
         });
     }
-    
-    public void setLangPT(){ // void to set the language to portuguese
+
+    public void isEmpty() {
+        checkBoxItem = !(!ckb_Acolyte.isSelected() && !ckb_Alchemist.isSelected() && !ckb_Archer.isSelected() && !ckb_Assassin.isSelected() && !ckb_BardDancer.isSelected() && !ckb_BlackSmith.isSelected() && !ckb_Crusader.isSelected() && !ckb_EveryJob.isSelected() && !ckb_Gunslinger.isSelected() && !ckb_Hunter.isSelected() && !ckb_Knight.isSelected() && !ckb_Mage.isSelected() && !ckb_Merchant.isSelected() && !ckb_Monk.isSelected() && !ckb_Ninja.isSelected() && !ckb_Novice.isSelected() && !ckb_Priest.isSelected() && !ckb_Rebelion.isSelected() && !ckb_Rogue.isSelected() && !ckb_Sage.isSelected() && !ckb_SoulLinker.isSelected() && !ckb_StarGladiator.isSelected() && !ckb_Swordman.isSelected() && !ckb_Taekwon.isSelected() && !ckb_Thief.isSelected() && !ckb_Wizard.isSelected() && !ckb_KagerouOboro.isSelected());
+        checkBoxItem = !(!ckb_NormalJobs.isSelected() && !ckb_3rdJobs.isSelected() && !ckb_Baby3rdJobs.isSelected() && !ckb_BabyJobs.isSelected() && !ckb_Upper3rdJobs.isSelected() && !ckb_UpperJobs.isSelected());
+        checkBoxItem = !(!ckb_RightHand.isSelected() && !ckb_Mantle.isSelected() && !ckb_UpperHeadGear.isSelected() && !ckb_LeftHand.isSelected() && !ckb_LowerHeadGear.isSelected() && !ckb_MiddleHeadGear.isSelected() && !ckb_Accessory1.isSelected() && !ckb_Accessory2.isSelected() && !ckb_ShadowAccessory1.isSelected() && !ckb_ShadowAccessory2.isSelected() && !ckb_ShadowArmor.isSelected() && !ckb_ShadowMantle.isSelected() && !ckb_ShadowShield.isSelected() && !ckb_ShadowShoes.isSelected() && !ckb_ShadowWeapon.isSelected() && !ckb_Shoes.isSelected() && !ckb_CostumeLower.isSelected() && !ckb_CostumeMiddle.isSelected() && !ckb_CostumeUpper.isSelected() && !ckb_Armor.isSelected());
+    }
+
+    public void setLangPT() { // void to set the language to portuguese
         lang = "PT";
         // translate tabbed panel
         tab_Panel.setTitleAt(1, "Equipado por");
         tab_Panel.setTitleAt(3, "Cliente");
         //Comboboxes translate
         i = cbx_ItemType.getSelectedIndex();
-        cbx_ItemType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cura", "Usavel", "Etc", "Arma", "Armadura", "Carta", "Ovo de bichinho", "Equipamento de bichinho", "Flechas/Munição", "Outros" }));
-        cbx_ItemType.setSelectedIndex(i);        
+        cbx_ItemType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Cura", "Usavel", "Etc", "Arma", "Armadura", "Carta", "Ovo de bichinho", "Equipamento de bichinho", "Flechas/Munição", "Outros"}));
+        cbx_ItemType.setSelectedIndex(i);
         i = cbx_Refinable.getSelectedIndex();
-        cbx_Refinable.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sim", "Não" }));
+        cbx_Refinable.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Sim", "Não"}));
         cbx_Refinable.setSelectedIndex(i);
         i = cbx_Gender.getSelectedIndex();
-        cbx_Gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ambos", "Masculino", "Feminino" }));
+        cbx_Gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Ambos", "Masculino", "Feminino"}));
         cbx_Gender.setSelectedIndex(i);
         i = cbx_WeaponType.getSelectedIndex();
-        cbx_WeaponType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Adagas", "Espadas de 1 mão", "Espadas de 2 maõs", "Lança de 1 mão", "Lança de 2 maõs", "Machado de 1 mão", "Machado de 2 maõs", "Maças", "Varinha/Cajado", "Arco/Besta", "Punho", "Instrumento musicai", "Chicote", "Livro", "Katar", "Revólver", "Rifles", "Espingardas", "Gatling guns", "Lança granadas", "Shuriken fuuma" }));
+        cbx_WeaponType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Adagas", "Espadas de 1 mão", "Espadas de 2 maõs", "Lança de 1 mão", "Lança de 2 maõs", "Machado de 1 mão", "Machado de 2 maõs", "Maças", "Varinha/Cajado", "Arco/Besta", "Punho", "Instrumento musicai", "Chicote", "Livro", "Katar", "Revólver", "Rifles", "Espingardas", "Gatling guns", "Lança granadas", "Shuriken fuuma"}));
         cbx_WeaponType.setSelectedIndex(i);
         i = cbx_ShieldType.getSelectedIndex();
-        cbx_ShieldType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escudo do aprendiz", "Broquel", "Escudo", "Escudo sagrado", "Escudo espelhado" }));
+        cbx_ShieldType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Escudo do aprendiz", "Broquel", "Escudo", "Escudo sagrado", "Escudo espelhado"}));
         cbx_ShieldType.setSelectedIndex(i);
         i = cbx_AmmoType.getSelectedIndex();
-        cbx_AmmoType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Flechas", "Adagas", "Balas", "Cartuchos", "Granadas", "Shuriken", "Kunai", "Balas de canhão", "Item Arremessaveis" }));
+        cbx_AmmoType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Flechas", "Adagas", "Balas", "Cartuchos", "Granadas", "Shuriken", "Kunai", "Balas de canhão", "Item Arremessaveis"}));
         cbx_AmmoType.setSelectedIndex(i);
         //focus on frist item
         txf_AegisName.requestFocus();
@@ -1264,31 +1277,32 @@ public class Tela extends javax.swing.JFrame {
         mei_New.setText("Novo");
         mei_Save.setText("Salvar");
     }
-    public void setLangEn(){ // void to set the language to english
+
+    public void setLangEn() { // void to set the language to english
         lang = "EN";
         // tranlate tabbed panel
         tab_Panel.setTitleAt(1, "Equiped by");
         tab_Panel.setTitleAt(3, "Client");
         //Comboboxes translate
         i = cbx_ItemType.getSelectedIndex();
-        cbx_ItemType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Healing", "Usable", "Misc", "Weapon", "Armor", "Card", "Pet Egg", "Pet Equipment", "Arrow/Ammunition", "Other" }));
-        cbx_ItemType.setSelectedIndex(i);        
+        cbx_ItemType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Healing", "Usable", "Misc", "Weapon", "Armor", "Card", "Pet Egg", "Pet Equipment", "Arrow/Ammunition", "Other"}));
+        cbx_ItemType.setSelectedIndex(i);
         i = cbx_Refinable.getSelectedIndex();
-        cbx_Refinable.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Yes", "No" }));
+        cbx_Refinable.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Yes", "No"}));
         cbx_Refinable.setSelectedIndex(i);
         i = cbx_Gender.getSelectedIndex();
-        cbx_Gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Both", "Male", "Female" }));
+        cbx_Gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Both", "Male", "Female"}));
         cbx_Gender.setSelectedIndex(i);
         i = cbx_WeaponType.getSelectedIndex();
-        cbx_WeaponType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Daggers", "1-Handed Swords", "2-Handed Swords", "1-Handed Spears", "2-Handed Spears", "1-Handed Axes", "2-Handed Axes", "Maces", "Wand/Staff", "Bows/Crossbows", "Knuckle Weapons", "Instrument", "Whips", "Books", "Katars", "Revolvers", "Rifles", "Shotguns", "Gatling guns", "Grenade launcher", "Fuuma shuriken" }));
+        cbx_WeaponType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Daggers", "1-Handed Swords", "2-Handed Swords", "1-Handed Spears", "2-Handed Spears", "1-Handed Axes", "2-Handed Axes", "Maces", "Wand/Staff", "Bows/Crossbows", "Knuckle Weapons", "Instrument", "Whips", "Books", "Katars", "Revolvers", "Rifles", "Shotguns", "Gatling guns", "Grenade launcher", "Fuuma shuriken"}));
         cbx_WeaponType.setSelectedIndex(i);
         i = cbx_ShieldType.getSelectedIndex();
-        cbx_ShieldType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Novice Guard", "Buckler", "Shield", "Holy Guard", "Mirror Shield" }));
+        cbx_ShieldType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Novice Guard", "Buckler", "Shield", "Holy Guard", "Mirror Shield"}));
         cbx_ShieldType.setSelectedIndex(i);
         i = cbx_AmmoType.getSelectedIndex();
-        cbx_AmmoType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arrows", "Daggers", "Bullets", "Shells", "Grenades", "Shuriken", "Kunai", "Cannonballs", "Sling Item" }));
+        cbx_AmmoType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"Arrows", "Daggers", "Bullets", "Shells", "Grenades", "Shuriken", "Kunai", "Cannonballs", "Sling Item"}));
         cbx_AmmoType.setSelectedIndex(i);
-       //focus on frist item
+        //focus on frist item
         txf_AegisName.requestFocus();
         //checkboxes translate
         ckb_Acolyte.setText("Acolyte");
@@ -1389,8 +1403,9 @@ public class Tela extends javax.swing.JFrame {
         mei_Exit.setText("Exit");
         mei_New.setText("New");
         mei_Save.setText("Save");
-    }   
-    public void newItem(){
+    }
+
+    public void newItem() {
         txa_itemdb.setText("");
         // reset focus on frist item
         tab_Panel.setSelectedIndex(0);
@@ -1485,7 +1500,8 @@ public class Tela extends javax.swing.JFrame {
         ckb_CostumeMiddle.setSelected(false);
         ckb_CostumeUpper.setSelected(false);
     }
-    public void makeFile(){
+
+    public void makeFile() {
         db.mkdirs();
         system.mkdirs();
         drop.mkdirs();
@@ -1493,57 +1509,62 @@ public class Tela extends javax.swing.JFrame {
         maleSprite.mkdirs();
         item.mkdirs();
         collection.mkdirs();
-        
+
         try {
             itemdb.createNewFile();
             iteminfo.createNewFile();
         } catch (IOException ex) {
-            
+
         }
     }
-    public void writeFile(){
+
+    public void writeFile() {
         try {
-            FileWriter itemdbW = new FileWriter(itemdb,true);
+            FileWriter itemdbW = new FileWriter(itemdb, true);
             BufferedWriter itemdbWriter = new BufferedWriter(itemdbW);
-            
-            itemdbWriter.write(itemDbString+"\n");
-            
+
+            itemdbWriter.write(itemDbString + "\n");
+
             itemdbWriter.close();
             itemdbW.close();
         } catch (IOException ex) {
         }
     }
-    public void readItemDB(){
+
+    public void readItemDB() {
         try {
             FileReader itemdbR = new FileReader(itemdb);
-            BufferedReader itemdbReader =  new BufferedReader(itemdbR);
+            BufferedReader itemdbReader = new BufferedReader(itemdbR);
             String line = itemdbReader.readLine();
-            
-            while(line != null){
-                txa_itemdb.setText(txa_itemdb.getText()+line+"\n");
+
+            while (line != null) {
+                txa_itemdb.setText(txa_itemdb.getText() + line + "\n");
                 line = itemdbReader.readLine();
             }
         } catch (Exception e) {
         }
     }
-    public void writeItemdb(){
-        
+
+    public void writeItemdb() {
+
     }
     // Diretories
-    File db             = new File("Output/Emulator/db");
-    File system         = new File("Output/Client/system");
-    File drop           = new File("Output/Client/data/sprite/¾ÆÀÌÅÛ/");
-    File femaleSprite   = new File("Output/Client/data/sprite/¾Ç¼¼»ç¸®/¿©/");
-    File maleSprite     = new File("Output/Client/data/sprite/¾Ç¼¼»ç¸®/³²/");
-    File item           = new File("Output/Client/data/texture/À¯ÀúÀÎÅÍÆäÀÌ½º/item/");
-    File collection     = new File("Output/Client/data/texture/À¯ÀúÀÎÅÍÆäÀÌ½º/collection/");
-    
+    File db = new File("Output/Emulator/db");
+    File system = new File("Output/Client/system");
+    File drop = new File("Output/Client/data/sprite/¾ÆÀÌÅÛ/");
+    File femaleSprite = new File("Output/Client/data/sprite/¾Ç¼¼»ç¸®/¿©/");
+    File maleSprite = new File("Output/Client/data/sprite/¾Ç¼¼»ç¸®/³²/");
+    File item = new File("Output/Client/data/texture/À¯ÀúÀÎÅÍÆäÀÌ½º/item/");
+    File collection = new File("Output/Client/data/texture/À¯ÀúÀÎÅÍÆäÀÌ½º/collection/");
+
     File itemdb = new File("Output/Emulator/db/item_db2.txt");
     File iteminfo = new File("Output/Client/system/iteminfo.lub");
     //My Variables
     String lang = "EN";
     String itemDbString = "item1";
     int i;
+    boolean checkBoxItem = false;
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Collection;
     private javax.swing.JButton btn_DropSPR;
